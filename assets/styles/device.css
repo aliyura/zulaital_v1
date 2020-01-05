@@ -1,0 +1,189 @@
+@media(max-width:1024px){
+    ayral-app .category-2dlayout [actas="layout"]{
+      width: 28.5%;
+      height:150px;     
+    }
+    ayral-app .category-2dlayout [actas="layout"] img{
+      width: 60%;
+      height:70%; 
+    }
+    .carousel .item {
+        height: 500px;
+    }
+    ayral-app .carousel,.slider-banner {
+        min-height: 500px;
+    }
+    ayral-app .carousel .item {
+        height: 500px;
+    } 
+    ayral-app .preview .carousel,.slider-banner {
+         min-height: 500px;
+    }
+    ayral-app .preview .carousel .item {
+         min-height:500px;
+     }
+    ayral-app .carousel-caption{
+       top: 10%;
+       bottom: auto;
+     }
+    ayral-app .widget, ayral-app .item-layout{
+        height: 250px;
+    } 
+    ayral-app .businessesContainer .businessWidget{
+        height: 350px;
+    }
+    ayral-app .businessesContainer .businessWidget .businessList-profile-ico{
+        height: 300px;
+    }
+    ayral-app .previewTab-layers .description{
+        max-height: inherit;
+    }
+     ayral-app .sub-preview-wrp .item img{
+        height: 200px;
+    }
+    ayral-app .item-layout .item-name{
+        height: 50px;
+    }
+    ayral-app .marketFilter-Search input{
+        width: 95%;
+    } 
+    ayral-app .search-view input{
+        width: 90%;
+    }
+    ayral-app .sign-container .sign-view{
+        width: 60%;
+    }
+    ayral-app .profile-header{
+        height: 400px;
+    }
+    ayral-app .profile-header .profile-photo-wrp{
+        top: 40%;
+    }  
+    ayral-app .profile-header .editProfile-cameraChooser-btn{
+        left: 55%;
+    }
+    [actas="option-view"] [actas="option"], [actas="option-bar"] [actas="option"]{
+        margin-left: 2em;
+    } 
+    [actas="option-view"] [actas="option"], [actas="option-bar"] [actas="option"]:last-child{
+        margin-right: 1em;
+    }
+    .widget .item-layout .sample-view{
+        height: 82%;
+    }
+     ayral-app .item-layout{
+        height: 300px;
+    } 
+     ayral-app .widget{
+        width: 49.6%;
+        height: 335px;
+    } 
+}
+@media(max-width:600px){
+    ayral-app .category-2dlayout [actas="layout"]{
+      width: 28%;
+      height: 100px;
+      padding-bottom: 10px;   
+    }
+    ayral-app .category-2dlayout [actas="layout"] img{
+       width: 50%;
+       height:60%; 
+    }
+    .carousel .item {
+        height: 300px;
+    }
+    ayral-app .carousel,.slider-banner {
+        min-height: 300px;
+    }
+    ayral-app .carousel .item {
+        height: 300px;
+    } 
+    ayral-app .preview .carousel,.slider-banner {
+         min-height: 300px;
+    }
+    ayral-app .preview .carousel .item {
+         min-height:300px;
+     }
+    ayral-app .search-view input{
+        width: 82%;
+    }
+    ayral-app .marketFilter-Search input{
+        width: 85%;
+    } 
+    .widget .item-layout .sample-view{
+        height: 60%;
+    }
+     ayral-app .widget, ayral-app .item-layout{
+        height: 200px;
+    } 
+    ayral-app .item-layout .item-name{
+        height: 40px;
+    }
+
+    [actas="option-view"] [actas="option"], [actas="option-bar"] [actas="option"]{
+        margin-left: 1em;
+    } 
+    [actas="option-view"] [actas="option"], [actas="option-bar"] [actas="option"]:last-child{
+        margin-right: 1em;
+    }   
+}
+@media(max-width:414px){
+    ayral-app .item-layout{
+        height: 260px;
+    } 
+    ayral-app .widget{
+        width: 49.4%;
+        height: 235px;
+    } 
+    ayral-app .item-layout .item-name{
+        height: 40px;
+    }
+     ayral-app .profile-header{
+        height: 300px;
+    }
+    ayral-app .profile-header .profile-photo-wrp{
+        top: 20%;
+    }  
+     ayral-app .sign-container .sign-view{
+        width: 90%;
+    }
+ 
+    ayral-app .businessesContainer .businessWidget{
+        height: 180px;
+    }
+    ayral-app .businessesContainer .businessWidget .businessList-profile-ico{
+        height: 122px;
+    }
+    ayral-app .sub-preview-wrp .item img{
+        height: 70px;
+    }
+    [actas="option-view"] [actas="option"], [actas="option-bar"] [actas="option"]{
+        margin-left: .5em;
+    } 
+    [actas="option-view"] [actas="option"], [actas="option-bar"] [actas="option"]:last-child{
+        margin-right: .2em;
+    }   
+}
+@media(max-width:350px){
+    ayral-app .item-layout .item-name{
+        height: 40px;
+    }
+     ayral-app .profile-header{
+        height: 200px;
+    }
+    ayral-app .profile-header .profile-photo-wrp{
+        top: 10%;
+    }  
+    ayral-app .sub-preview-wrp .item img{
+        height: 50px;
+    }
+     ayral-app .sign-container .[actas="sign-view"]{
+        width: 100%;
+    }
+    [actas="option-view"] [actas="option"], [actas="option-bar"] [actas="option"]{
+        margin-left: .5em;
+    } 
+    [actas="option-view"] [actas="option"], [actas="option-bar"] [actas="option"]:last-child{
+        margin-right: .5em;
+    }   
+}

@@ -1,0 +1,2250 @@
+html{
+  width: 100%;
+  font-family:Arial, Helvetica, sans-serif !important;
+  font-size: 12px;
+  background:#f5f5f5;
+}
+html *{
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:400;
+}
+body{
+   width: 100%;
+   min-height: 100%;
+   font-size: 12px; 
+   overflow:hidden;
+    overflow-y: auto;
+   background:#f5f5f5;
+   font-family:Arial, Helvetica, sans-serif !important;
+   padding: 0;
+   margin: 0;
+   color: #333;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  background-color: transparent;
+  border-radius: 5px; 
+  height: 50px; 
+}
+ayral-app .required{
+    font-weight: 400 !important;
+}
+/* Ripple effect */
+.ripple, button, img, li{
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.ripple:after, button:after, img:after, li:after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+.ripple:active:after, button:active:after, img:active:after, li:active:after{
+  transform: scale(0, 0);
+  opacity: .2;
+  transition: 0s;
+}
+ayral-app .mainLayout{
+    width: 100%;
+    min-height:100%;
+    overflow: hidden;
+    margin-top: 55px; 
+    margin-bottom: 70px;
+    padding-bottom: 100px;
+}
+ayral-app  .topPadding{
+    padding-top: 0;
+}
+ayral-app .topMargin {
+  margin-top: 52px !important;
+}
+ayral-app  .paddingBody{
+  padding: 6px; 
+  padding-top: 10px;
+}
+ayral-app .marketView-container{
+   margin-top: 51px !important;  
+}
+h3,h2{
+ font-size: 1.4em;
+}
+h4, .h4 {
+ font-size: 1rem; 
+}
+button{
+    text-transform: capitalize;
+}
+ayral-app .action-bar-top{
+  width: 100.2%;
+  height: 56px;
+  background-color: #fff;
+  color: #000;
+  padding-top: 7px;
+  margin-top: -2px;
+  margin-left: -1px;
+  border-bottom: .5px solid rgba(0,0,0,.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+  -ms-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+ayral-app [actas="drawer"] [actas="layer"]{
+    float: left !important;
+    position: relative;
+    left: 0;
+    margin: 0;
+    z-index: 4000;
+    background: #fff;
+    width: calc(100/2.5);
+}
+ayral-app .in{
+    width: 100%;
+    margin-left:0;
+    margin-right: 0;
+    padding-left: 1em;
+}
+ayral-app .appLogo-img{
+    margin-top: -2px;
+    margin-left: -6px;
+    cursor: pointer;
+    height: 30px;
+    width: 80%;
+}
+ayral-app .capitalize{
+   text-transform: capitalize;
+}
+ayral-app .lower{
+   text-transform: capitalize;
+}
+ayral-app .upper{
+   text-transform: capitalize;
+}
+ayral-app .pedding-body{
+    padding: 8px;
+}
+ayral-app [actas="activity"]{
+    margin-top: -5px;
+}
+ayral-app [actas="group-view"] *{
+    display:inline;
+}
+ayral-app [actas="title"]{
+    background: none;
+}
+
+.action-bar-top i{
+    color: #000;
+}
+
+ayral-app .notificationBadge{
+    position: absolute;
+    font-size: 8px;
+    top: 10px;
+    margin-left: 20px;
+}
+.explore-btn{
+    text-align: center;
+}
+ayral-app  .actionbar-backbtn, ayral-app .actionbar-favicon{
+    height: 25px;
+    width: 30px;
+    border: 1px solid #333;
+    border-radius:5px;
+    color:#2ecc71;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+}
+ayral-app .explore-btn .title, ayral-app .logo-btn .title{
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+ayral-app .logo-btn .title{
+    vertical-align: super;
+}
+ayral-app  .actionbar-favicon{
+    height: 25px;
+    width: 30px;
+}
+ayral-app .logo-btn .title{
+    padding-left: 0;
+    padding-top: 10px;
+}
+.notify{
+    position: absolute;
+    top: 5px;
+    margin-left: -5px;
+    font-size: 8px;
+}
+.readMore{
+    margin-left: 2em;
+    color: #2ecc71;
+}
+.cart-title{
+    padding: 5px;
+}
+ayral-app .drawer-header{
+    background:#2ecc71;
+    padding: 0;
+    width: 100.3%;
+    margin-left:-.8px;
+    margin-top:-.8px;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 5px;
+     -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;
+    background-image: url(../images/user-img-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.body.[state="enabled"]{
+     overflow-y: auto;
+}
+.body.[state="disabled"]{
+     overflow-y: hidden;
+}
+ayral-app  .menu-view li{
+  padding: 1em !important;
+  width: 100%;
+  background: #fff;
+
+}
+ayral-app  .menuList-layer{
+   width: 100%;
+   height: 70%;
+   padding-bottom: 90px;
+   overflow-y: auto;
+   overflow-x: hidden;
+   background: #fff;
+}
+ayral-app .menu-view li:hover,ayral-app .menu-view li.active,ayral-app .menu-view li:first-child{
+     background-color:#2ecc71;
+    border-color: #2ecc71;
+    color: #ffffff;
+
+}
+
+ayral-app .tabs-view [state="active"]{
+    color: #fff;
+    border-bottom: 2px solid #2ecc71;
+    opacity: 1;
+}
+ayral-app .tabs-view [state="active"]:hover{
+    border-bottom: 2px solid #2ecc71;
+    opacity: 1;
+    color: #2ecc71;
+    font-size: 23px;
+    opacity: 0.8;
+}
+ayral-app  .tabs-view [state="active"] i{
+    color: #2ecc71;
+    opacity: 1;
+    font-size: 23px;
+    opacity: 0.8;
+}
+ayral-app .action-bar-bottom{
+    height: 55px;
+    border-top: .5px solid rgba(0,0,0,.15);
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+  -ms-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+.widget .newOld-wrapper{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;   
+    border-bottom-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+
+
+.widget .oneOfCounter-wrapper{
+    position: absolute;
+    top: 15px;
+    right: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #00000069;
+    border-radius: 99px;
+    font-size: 10px;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;   
+}
+.widget .Siyayya-signature{
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;
+}
+.item-layout{
+  padding: 0;
+  position: relative;
+ transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;
+}
+ayral-app .upload-info{
+    margin-top: 0;
+    background: #fff;
+}
+ayral-app .upload-info i{
+    color: #000;
+     background: #fff;
+}
+ayral-app .upload-info p{
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-top: -1em;
+     background: #fff;
+}
+ayral-app .upload-2dLayout{
+   width: 100%;
+   background: none !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ayral-app .upload-2dLayout [actas="layout"]{
+    background: none !important;
+    width: calc(100%/2);
+    margin: 0;
+    padding: 0;
+}
+
+ayral-app .upload-2dLayout [actas="layout"] select{
+    width:100%;
+    margin: 0;
+    background: #fff;
+    font-weight: 100;
+    text-shadow:  0 6px 4px -4px #000;
+}
+ayral-app .item-name{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-bottom: 5px;
+    text-overflow: ellipsis;
+    vertical-align: top;
+     background: #fff;
+}
+ayral-app .item-action{
+    display: block; 
+}
+.widget{
+    width: 49%;
+    height: 600px;
+    margin: auto;
+    display: inline-block;
+    margin-top: .8em;
+    margin-bottom: 1.5em;
+    font-size: 12px;
+    position: relative;
+    vertical-align: top;
+    transition: background 0.25s ease;
+    -webkit-transition: background 0.25s ease;
+    -moz-transition: background 0.25s ease;
+    -ms-transition: background 0.25s ease;
+    -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+.widget .item-layout {
+    display: block;
+    position: relative;
+}
+.widget .item-layout .sample-view{
+   width: 100%;
+    height: 60%;
+    display: block;
+   padding: 8px;
+   padding-right: 0;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.68)),url(../images/no_sample_preview.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.item-layout .sample-info{
+  width: 100%;
+  height: 100px;
+  display: block;
+  margin-bottom: 1em;
+    
+}
+.item-layout .upload-info{
+    margin: 0;
+    font-size: 6px;
+    top: 2px;
+}
+.item-layout .upload-info p{
+   padding-bottom: 3px;
+}
+.item-layout .upload-info .price{
+    width: 100%;
+    font-size: 16px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    margin-top: 3px;
+    color: #2ecc71;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    text-align: left;
+    background: #f5f5f5;
+    border-top:1px solid #2ecc71;
+    
+}
+.item-layout .item-action{
+   width: 100%;
+   position: absolute;
+   top: 40%;
+   right: 0;
+}
+.tabs-view [state="active"]{
+    color: #2ecc71;
+    font-weight: bold;
+    border-bottom: 2px solid #2ecc71;
+    opacity: 1;
+}
+.item-layout .item-action .action-btn{
+    padding: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 8px;
+    background-color: #5b5b5b00;
+    border: 2px solid #fff;
+    color: #fff;
+    -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+.upload-icon-wrp,upload-icon-desc{
+    display: inline-block;
+}
+.upload-icon-wrp{
+    width:100%;
+    height: 100px;;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 8px;
+    padding-top: 12px;
+    padding-left: 10px;
+    vertical-align: top;
+    text-align: center;
+    font-size: 16px;
+    border:1px solid #ccc;
+    border-bottom:2px solid #333;
+    display: block;
+}
+.upload-icon-wrp:hover{
+   opacity: 0.9;
+   padding-top: 15px;
+   padding-left: 13px;
+}
+.upload-icon-wrp span{
+    vertical-align: top;
+    padding-top: 20px;
+}
+.upload-icon-wrp img{
+    vertical-align: middle;
+}
+.upload-icon-desc{
+    padding-top: 10px;
+}
+ayral-app .inline-check{
+    width: 15%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1em;
+}
+ayral-app .inline-check input, .inline-check span{
+    display: inline-block;
+}
+.inline-check label, .inline-check  span{
+    display:initial;
+    padding: 0;
+    margin: 0;
+}
+.post-btn{
+    min-width: 100px;
+    height: 40px;
+    float: right;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 3em;
+}
+.description{
+    width: 100%;
+    height: 200px;
+    margin-left: 0;
+    margin-bottom: 1em;
+}
+ayral-app .login-sigup-layout{
+    text-align: right;
+   position: absolute;
+   z-index: 100;
+   right: 5px;
+   top: 10%;
+   background: none;
+}
+ayral-app .login-sigup-layout button{
+    border-radius: 99px;
+    padding-left: 1em;
+    padding-right: 1em;
+     background-color: #fff;
+    color: #000;
+    -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;
+}
+ayral-app  .loginOrRegister-wrapper{
+    border-radius: 99px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 0;
+    padding-top: 0;
+     background-color: rgba(255, 255, 255, 0.82);
+    color: #000;
+    -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;
+    border: 1px solid #fff;
+    margin-top: 15px;
+}
+ayral-app .loginOrRegister-wrapper button{
+    border-radius: 0;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-bottom: -0;
+    padding-top: 5px;
+    background:none;
+    color:  #000;
+    box-shadow: none;
+     -webkit-box-shadow: none;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+ayral-app .launcher-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+    font-weight: bold;
+    background: #fff;
+    color: #000;
+       -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;   
+}
+ayral-app .launcher-view{
+  position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+ayral-app .final-launcher-body{
+    margin-top: 50%;
+}
+ayral-app .launcher-body .title{
+    padding-left: 9px;
+    margin-bottom: 1em;
+    
+}
+ayral-app .launcher-body p{
+    padding: 1em;
+    border: 1px solid #fff;
+    margin-bottom: 2em;
+    
+}
+ayral-app .launcher-body .data{
+    padding-bottom: 2em;
+    
+}
+ayral-app .launcher-body .badges-wrp{
+    margin-top: 1em;
+}
+ayral-app .launcher-body .badges-wrp .badgeCounter{
+    padding: 8px;
+    width: 8px;
+    height: 5px;
+    background: #fff;
+    margin: 5px;
+    border-radius: 99px;
+    display: inline-block;
+    border: 1px solid #fff;
+       -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;  
+}
+ayral-app .launcher-body .badges-wrp .badgeCounter.active{
+    background: #6f689d;
+}
+ayral-app .launcher-body .badges-wrp .badgeCounter:first-child{
+ margin-left: 0;
+}
+
+ayral-app .selected-samples-wrp{
+    width: 100%;
+    min-height: 100px;
+    background: #fff;
+    display: block;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 2px dotted #25bb65;
+    margin-top: .5em;
+    padding: 5px;
+      -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;
+}
+ayral-app .selected-samples-wrp::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+ayral-app  .uploadPreview-wrapper{
+    width:32.5%;
+    margin: 5px;
+    border:1px solid #ccc;
+    display:inline-block;
+    position: relative;
+    border: 1px solid #ccc;
+    opacity: 0.1;
+    background: #fefefe;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #dee2e4;
+    border-radius: 10px;
+    background: #f2f2f2;
+    padding: 5px;
+}
+ayral-app  .uploadPreview-wrapper img,ayral-app  .uploadPreview-wrapper .loaderWrapper{
+    width:100%;
+    height:100%;
+}
+ayral-app .uploadPreview-wrapper .loaderWrapper{
+    background:rgba(234, 80, 76, 0.97);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+ayral-app  .uploadPreview-wrapper .loaderWrapper img{
+    width: 15px;
+    height: 15px;
+    margin-top: 40%;
+}
+ayral-app  .loadMore-loader{
+    width: 15px;
+    height: 15px;
+    margin-top: -1em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+ayral-app  .uploadPreview-wrapper.active,ayral-app  .uploadPreview-wrapper:first-child{
+    opacity: 1;
+}
+ayral-app  .uploadPreview-wrapper:hover{
+    width:31.5%;
+    height:90px; 
+}
+ayral-app .upload-container .upload-header{
+   padding-top: 1.5em;
+   padding-bottom: 1.5em;
+   border-bottom: 1px solid #ccc;
+}
+ayral-app  .upload-body .input-container .field{
+   font-weight: normal;
+   background: #fff;
+   padding-left:0;
+}
+ayral-app  .upload-body input{
+   width: 100%;
+    margin-left: 0;
+}
+
+@media(max-width:800px){
+    ayral-app  .uploadPreview-wrapper{
+        height:150px;
+    }
+}
+@media(max-width:600px){
+    ayral-app  .uploadPreview-wrapper{
+        height:120px;
+    }  
+}
+@media(max-width:360px){
+    ayral-app  .uploadPreview-wrapper{
+        height:90px;
+    }  
+}
+/*
+  AUTOCOMPLETE START
+*/
+.autocomplete {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top:40px;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+  color: #333;
+}
+.autocomplete-items div:hover,.autocomplete-items div:first-child {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+  font-weight: bold;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+   background-color: #d4d4d4;
+   border-color:  #d4d4d4;
+   color: #333;
+}
+/*
+   LOGIN, SIGNUP, RECOVER PASSWORD
+*/
+button{
+ background: #fff;
+ margin-left: 0;
+}
+.sign-container .sign-view{
+  background: none;
+  border: none;
+  padding: 0;
+  color: #000;
+}
+ayral-app .signup-bg{
+  width: 100%;
+  height: 101%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  bottom: -1;
+  margin: 0;
+  padding: 0;
+  background:#fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #000;
+}
+ayral-app .signup-bg .link,ayral-app .signup-bg  label,ayral-app .signup-bg  p{
+  color: #000;
+  font-weight:100;
+}
+ayral-app .saleTag-img{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+ayral-app .signup-bg  p{
+  margin-bottom: 1em;
+}
+ayral-app .login-bg{
+  width: 100%;
+  height: 101%;
+  position:fixed;
+  background: none;
+  top: 0;
+  left: 0;
+  bottom: -1;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 255, 0.02), rgba(29, 249, 122, 0.72)),url(../images/sign-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #fff;
+}
+ayral-app .launcher-bg1,ayral-app .launcher-bg2, ayral-app .launcher-bg3{
+  width: 100%;
+  height: 101%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  bottom: -1;
+  margin: 0;
+  padding: 0;
+  z-index: 2000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  color: #fff;
+}
+ayral-app .launcher-bg1{
+  background-image: linear-gradient(rgba(0, 0, 255, 0.02), rgba(29, 249, 122, 0.72)),url(../images/launcher_1.jpg);
+}
+ayral-app .launcher-bg2{
+  background-image: linear-gradient(rgba(0, 0, 255, 0.02), rgba(29, 249, 122, 0.72)),url(../images/launcher_2.jpg);
+}
+ayral-app .launcher-bg3{
+    text-align: center;
+    vertical-align: middle;
+  background-image: linear-gradient(rgba(0, 0, 255, 0.02), rgba(29, 249, 122, 0.72)),url(../images/launcher_3.jpg);
+     background-position: center;
+    padding-top: 80%;
+}
+ayrap-app .launcher-bg3{
+    background-position: left;
+}
+ayral-app .launcher-bg3 .getStarted-btn{
+    background: rgba(84, 118, 82, 0.56) !important;
+    background-color: rgba(84, 118, 82, 0.56) !important;
+    width: 180px;
+    height: 70px;
+     -webkit-box-shadow: 0 10px 6px -10px #000;
+      -moz-box-shadow: 0 10px 6px -10px #000;
+    box-shadow: 0 10px 6px -10px #000;
+    font-size: 12px;
+    font-weight: bold;
+}
+ayral-app .launcher-bg3 .getStarted-btn:hover{
+    font-weight: 100;
+}
+.account-trigger{
+    border: 1px solid #2ecc71
+}
+.account-trigger[state="active"]{
+ background-color: #2ecc71;
+  background: -moz-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
+  background: linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
+  background: -webkit-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  background: -ms-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  background: -o-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  border-color:  #2ecc71;
+  color: #fff;
+    -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;
+}
+
+.sign-container .sign-view{
+  color: #fff;
+}
+ayral-app .sign-container .account-panel .input-container .field, 
+ayral-app .upload-body .input-container .field{
+  background: #fff;
+}
+.sign-container .sign-view [actas="header"]{
+   background: none;
+   text-align: center;
+}
+.sign-container .sign-view [actas="group-view"]{
+ -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+.sign-container .sign-view [actas="body"]{
+    margin-top:0;
+    margin-bottom: .2em;
+    border: none;
+    background: none;
+}
+.sign-container .login-view [actas="body"]{
+    margin-top:60%;
+    border: none;
+}
+.sign-container .login-view [actas="footer"]{
+    margin-top: 3em;
+}
+.sign-container .login-view [actas="body"] .check{
+  margin-bottom: 1em;
+  margin-top: 3px; 
+}
+.sign-container .sign-view .sigb-btn{
+  margin-top: 5px;
+  height: 34px;
+  text-transform: uppercase;
+}
+.sign-container .sign-logo{
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    border-radius: 99px;
+    margin: auto;
+    background: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 1.3em;
+    margin-bottom: 5px;
+    padding-top: .4em;
+     border-bottom: 1,2px solid #000;
+     -webkit-box-shadow: 0 6px 4px -4px #000;
+  -moz-box-shadow: 0 6px 6px -4px #000;
+  box-shadow: 0 6px 4px -4px #000;
+}
+.sign-container .sign-logo img{
+    border-radius: 99px;
+}
+.login-view .input-container{
+    border: none;
+    height: 37px;
+    background: none !important;
+    border-bottom: 1px solid #a2a2a2;
+     -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;
+}
+.links .link:first-child{
+    float: left;
+}
+.links .link:last-child{
+    float: right;
+}
+.input-container .icon{
+    min-width: 40px;
+    background-color: transparent;
+}
+.login-view .input-container{
+    height: 35px !important;
+    margin-bottom: 2em;
+}
+.input-container .field{
+    border: none;
+    padding-left: 0;
+    color: #333;
+    font-size: 16px;
+}
+.login-view .input-container .field{
+    background:none;
+    border: none;
+    padding-left: 0;
+    color: #fff;
+    font-size: 16px;
+}
+.login-view .input-container .field{
+    color:#f5f5f5;
+}
+.input-container .field:hover{
+    border: none;
+}
+.field{
+    margin: 0;
+}
+ayral-app .upload-body{
+    background: #fff !important;
+    margin-bottom: 3em;
+}
+.upload-body .message-field{
+    height: 200px;
+}
+.sign-container .abs-in{
+    text-transform: none;
+}
+.alert-warning{
+    margin: 0;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    border-radius: 0;
+    color: #721c24;
+    background-color: rgba(248, 215, 218, 0.43);
+    display: none;
+    text-align: center;
+}
+.successAlert{
+    margin: 0;
+    padding: 2px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    border-radius: 0;
+    display: none;
+    
+}
+.sign-container .signupAlert{
+    margin-top: 5px;
+}
+
+/*
+   END
+*/
+/*
+   PROFILE START
+*/
+ayral-app .profile-container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+ayral-app .profile-header{
+    width: 101%;
+    padding: 0;
+    min-height: 40%;
+    margin-left: -1px;
+    height:auto;
+    padding: 1em;
+     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.72)),url(../images/user-img-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  color: #fff; 
+  margin-bottom: 0;
+}
+ayral-app .profile-header .profile-photo-wrp .wrapper{
+    display: block;
+    position: relative;
+    margin-top: 2em;
+    cursor: pointer;
+}
+ayral-app .profile-header .profile-photo-wrp img{
+   color: #fff;
+     border-bottom: 1,2px solid #000;
+    -webkit-box-shadow: 0 6px 4px -4px #000;
+    -moz-box-shadow: 0 6px 6px -4px #000;
+    box-shadow: 0 6px 4px -4px #000;
+    margin-bottom: 5px;
+}
+ayral-app .wrapper{
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+}
+
+ayral-app .wrapper .profile-todo{
+    padding: 10px;
+    margin:0;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    font-size: 10px;
+    margin-left: 5px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-right:10px solid #f0f0f0;
+    box-shadow: none; 
+    -webkit-box-shadow: none;
+    
+}
+ayral-app .wrapper .profile-todo:first-child{
+    border-left:10px solid #f0f0f0;
+}
+
+ayral-app .profile-sub-info{
+    width: 100%;
+    padding:0;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+ayral-app .profile-sub-info .layout [actas="layout"]{
+   padding: 5px;
+   text-align: center;
+   vertical-align: middle;
+   text-overflow: ellipsis;
+    font-size: 10px;
+    padding-bottom: 1em;
+    
+}
+ayral-app .profile-sub-info .layout [actas="layout"] [actas="heading"]{
+  font-size: 10px;  
+    background: #fff;
+     border:1px solid #dcdcdc;
+      border-bottom: 1,2px solid #000;
+    -webkit-box-shadow: 0 6px 4px -4px #000;
+    -moz-box-shadow: 0 6px 6px -4px #000;
+    box-shadow: 0 6px 4px -4px #000;
+    border-bottom: 1px solid #afacac;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+ayral-app .profile-sub-info .layout [actas="layout"] [actas="title"]{
+  width: 90%;
+    margin: auto;
+}
+ayral-app .profile-sub-info .layout [actas="layout"]:first-child{
+   padding: 5px;
+   border-left: none;
+    padding-bottom: 1em;
+}
+ayral-app  .data-list{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+ayral-app .profile-info-list .data-list .heading{
+    width: 100%;
+    color: #2ecc71;
+    font-weight: bold;
+}
+ayral-app .profile-info-list .data-list .data{
+    font-size: 16px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+    position: relative;
+}
+ayral-app .profile-info-list .data-list p{
+    padding-left: 0px;
+}
+ayral-app .editProfile-info .data-list p{
+    padding-left: 12px;
+}
+ayral-app .profile-info-list .data-list .data .inner-data{
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+}
+ayral-app .profile-info-list .data-list .data .inner-data-ico{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-color: #2ecc71;
+    border-right: 1px solid #ccc
+    
+}
+ayral-app .profile-info-list .data-list .data i{
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+}
+ayral-app .editProfile-input{
+   width: 100%;
+   padding: 0;
+   border: none;
+    border-left: 1px solid #ccc;
+    padding-left: 5px;
+}
+ayral-app .data-list.next,.next{
+    background: #f5f5f5;
+}
+ayral-app .editProfile-textarea{
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    padding: 0;
+    padding-left: 5px;
+    border-bottom: none;
+}
+ayral-app . .profile-photo-wrp{
+    position: relative;
+}
+ayral-app .profile-photo-wrp h4{
+    font-size: 16px !important;
+    font-weight: bold;
+    text-overflow: ellipsis;
+}
+
+ayral-app .profile-photo-wrp img{
+    border: 2px solid #fff;
+    background: #fff;
+}
+ayral-app .drawerProfilePhoto{
+    background: #fff;
+    margin-top: 1em;
+      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+ayral-app .editProfile-cameraChooser-btn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #fff;
+    border-radius: 99px;
+    position: absolute !important;
+    right: 70px;
+    padding: 10px;
+    z-index: 200;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 1px solid #ccc;
+     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #ccc;
+    opacity: 1;
+    
+}
+ayral-app .editProfile-cameraChooser-btn:hover{
+    border: none;
+    opacity: 0.8;   
+}
+ayral-app  .saveProfile-editor-trigger{
+    min-width: 90px;
+    height: 40px;
+    border-radius: 99px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+/*
+   END OF PROFILE
+*/
+ayral-app .category-2dlayout{
+    width: 101%;
+    position: relative;
+    display: block;
+    vertical-align: baseline;
+    margin-top: 5px;
+    margin-bottom:.5em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+ayral-app .category-2dlayout [actas="layout"]{
+    width: 28%;
+    height:90px; 
+    margin: 2.2%;
+    padding: 1em;
+    padding-right: .2em;
+    padding-left: .2em;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    padding-bottom: 5px;
+     border:  1px solid #e4e4e4;    
+}
+ayral-app .category-2dlayout [actas="layout"] img{
+    width: 60%;
+    height:50%; 
+}
+ayral-app .category-2dlayout [actas="layout"]:hover{
+  opacity: 0.7;
+}
+.carousel-indicators{
+ display: none;    
+}
+/*
+END OF CATEGORY LIST
+*/
+ayral-app .search-view{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background: #fff;
+    padding: 0;
+    top: 55px;
+    left: 0;
+    z-index: 300;
+    border:1px solid #dcdcdc;
+    border-bottom: 1,2px solid #000;
+    border-radius: 1px;
+    border-bottom: 1px solid #ccc;
+}
+ayral-app .landingSearch-view{
+    width: 100%;
+    position: relative;
+    background: #fff;
+    padding: 0;
+    border-bottom: 1,2px solid #000;
+    border-radius: 1px;
+    border-bottom: 1px solid #ccc;
+}
+ayral-app .search-view input,ayral-app .landingSearch-view input{
+    width: 80%;
+    font-size: 14px !important;
+    display:inline-block;
+    border: none;
+    text-transform: capitalize;
+    
+}
+ayral-app .search-view button,ayral-app .landingSearch-view button{
+    width:auto;
+    height: 35px;
+    padding: 8px 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    text-align: center;
+    display:inline-block;
+    margin-top: -1px;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow:none;  
+    -ms-box-shadow:none;
+     -moz-box-shadow:none;
+}
+ayral-app .marketFilter-Search{
+    width: 100%;
+    height: 50px;
+    padding: 8px 5px;
+    display: block;
+    position: fixed;
+    padding: 0;
+    z-index: 400;
+    border-top: 0;
+}
+ayral-app .marketFilter-Search input{
+    width: 86%;
+    height: 45px;
+    padding: 8px 15px;
+    padding-left: 8px;
+    margin: 0;
+}
+ayral-app .marketFilter-Search button{
+    height: 46px;
+    padding: 8px 5px;
+    padding-top: 10px;
+    margin: 0;
+    text-align: right;
+}
+
+ayral-app  .location-chooser-view{
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-align:left;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    background: none;
+    display: inline-block;
+    background:none;
+}
+ayral-app  .location-chooser-view select,ayral-app .location-chooser{
+    background: none;
+}
+ayral-app .homeSearchInput{
+    max-width: 90%;
+    display: inline-block;
+    background:none;
+    margin-top: 2px;
+    padding-left: 5px;
+}
+ayral-app  .location-chooser-view .input-container{
+   border: none;
+   padding: 0;
+}
+ayral-app  .location-chooser-view .input-container .field{
+    margin-left: -12px;
+}
+
+ayral-app .activityViewError{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+}
+ayral-app .activityViewError{
+   padding-bottom: 2px;
+   opacity: 1;
+}
+ayral-app .activityViewError p{
+   opacity: 0.5 !important;
+}
+ayral-app [name="notificationDropdown"]{
+  top:50px; 
+}
+ayral-app .result-counter-view{
+    position: absolute;
+    left: 5px;
+    top: 110px;
+}
+ayral-app .result-counter-view-found{
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 2px;
+    display: block;
+}
+ayral-app .result-counter-view-found h4 i{
+        background-color: #2ecc71;
+  background: -moz-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
+  background: linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
+  background: -webkit-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  background: -ms-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  background: -o-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  border-color:  #2ecc71;
+}
+ayral-app .result-counter-view h4,ayral-app .result-counter-view-found h4{
+   font-weight: bold;
+   font-size: 12px;
+    text-transform: capitalize;
+}
+ayral-app .paymentMethods-wrp,ayral-app  .orderForm-wrp{
+   width: 100%;
+   padding: 0;
+    
+}
+ayral-app .paymentMethods-wrp{
+    width: 101%;
+    background: #fff;
+}
+ayral-app .paymentMethods-wrp button{
+   width: 45%;
+   background: none;
+   box-shadow: none;
+   -webkit-box-shadow:none;
+}
+ayral-app .paymentMethods-wrp button:first-child{
+   color: #2ecc71;
+   border-bottom: 1px solid #ccc; 
+}
+ayral-app .address-accuracy{
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    padding: 10px;
+}
+ayral-app .order-header{
+    padding: 5px;
+    text-align: left;
+    margin: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 92%;
+}
+ayral-app .toggle{
+    position: absolute;
+    top: 75%;
+    right: 8px;
+}
+ayral-app .disablingSwitch[state="ON"]{
+   width: 100px;
+   height: 30px;
+   background: #efefef;
+    font-size: 6px;
+    border-right: 36px  solid #4caf50;
+    padding-left: 2px;
+     padding-right: 2px;
+    border-radius: 99px;
+    -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+ayral-app .disablingSwitch[state="OFF"], ayral-app .disablingSwitch[state="PA"]{
+   width: 100px;
+   height: 30px;
+   background: #efefef;
+   font-size: 6px;
+   border-left: 36px  solid #ababab;
+   padding-left: 2px;
+   padding-right: 2px;
+  border-radius: 99px;
+    -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+ayral-app .trashLayer{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+   background: #efefef;
+   font-size: 20px;
+   padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+      -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+ayral-app .trashLayer:focus{
+   background: #2ecc71;
+}
+ayral-app .activityLoader{
+   position: fixed;
+   top: 50%;
+   left: 43%;
+   right: 47%;
+   bottom: 50%;
+   text-align: center;
+   vertical-align: middle;
+    cursor: pointer;
+}
+ayral-app  .RetryActivity-trigger{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    padding-left: 30%; 
+    padding-right: 30%;
+    text-overflow: ellipsis;
+    text-align: center;
+    vertical-align: middle;
+     box-sizing: border-box;
+    border: none;
+    outline: none;
+    box-shadow: none; 
+    -webkit-box-shadow: none;
+    -ms-box-shadow: none;
+    background: none;
+}
+.RetryActivity-trigger p{
+    font-size: 8px !important;
+    text-transform: capitalize;
+    opacity: 0.5;
+}
+ayral-app .new{
+   background-color: #009688;
+  background: -moz-linear-gradient(top,  #009688 0%, #0ba596 50%, #0ba596 51%,  #009688 100%); 
+  background: linear-gradient(top,  #009688 0%, #0ba596 50%, #0ba596 51%,  #009688 100%); 
+  background: -webkit-linear-gradient(top,  #009688 0%, #0ba596 50%, #0ba596 51%,  #009688 100%);
+  background: -ms-linear-gradient(top,  #009688 0%, #0ba596 50%, #0ba596 51%,  #009688 100%);
+  background: -o-linear-gradient(top,  #009688 0%, #0ba596 50%, #0ba596 51%,  #009688 100%);
+  border-color:  #2ecc71;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+}
+.previewFrame-layer .newOld-wrapper{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;   
+    border-bottom-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+.previewFrame-layer .sayayyaStamp-wrp{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;   
+    border-bottom-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+.previewFrame-layer .sayayyaStamp-wrp img{
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+}
+.previewFrame-layer .oneOfCounter-wrapper{
+    position: absolute;
+    top: 15px;
+    left: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: #00000069;
+    border-radius: 99px;
+    font-size: 10px;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000; 
+}
+.previewFrame-layer .userPID{
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000; 
+    border: none;
+    opacity: 0.6;
+    padding: 2px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    font-size: 10px;
+}
+ayral-app .sizesColors-wrapper{
+    text-align:left;
+    padding:10px;
+    padding-bottom: 0;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 46%;
+    background: #f5f5f5;
+    
+}
+
+ayral-app .sizesColors-wrapper .sizesColors-btn{
+    min-width: 50px;
+    margin-right: 5px;
+    font-size: 12px;
+    background: #fff;
+     border: 1px solid #2ecc71;
+    box-shadow: none;
+    -webkit-box-shadow:none;
+       -moz-box-shadow: none;
+    border-radius: 99px;
+    border-top: none;
+    border-bottom: none;
+    margin-bottom: 1em;
+    font-size: 8px;
+        border: 1px solid #2ecc71;
+    border-top: 2px solid #333; 
+    border-bottom: 2px solid #333;
+}
+ayral-app .sizesColors-wrapper .sizesColors-btn:focus, 
+ayral-app .sizesColors-wrapper [name="current-selectedSize"],
+ayral-app .sizesColors-wrapper [name="current-selectedColor"]{
+    opacity: 0.7;
+    border: 1px solid #333;
+}
+ayral-app .report-container{
+  margin-top: 1em;
+  transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+}
+.bottomTabs-view .menu-item:focus i,.bottomTabs-view[state="active"] i{
+    color: red;
+}
+ayral-app .info-view{
+    width: 94%;
+    margin: 3%;
+    margin-top: 1.5em;
+}
+ayral-app .languagesOption-wrp{
+   margin-bottom: 2em;
+   text-align: center;
+}
+ayral-app .languagesOption-wrp .group-view{
+   width: 90%;
+   margin: auto;
+   padding-right: 20px;
+      box-shadow: none;
+  -webkit-box-shadow: none;
+}
+ayral-app .languagesOption-wrp .group-view .luncherLanguageTrigger{
+  background:rgba(255, 255, 255, 0.88);
+  color: #333;
+  font-size: 12px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+ayral-app .languagesOption-wrp .group-view .luncherLanguageTrigger:first-child{
+    border-bottom-left-radius: 20px;
+    border-left: 1px solid #ccc;
+}
+ayral-app .languagesOption-wrp .group-view .luncherLanguageTrigger:last-child{
+    border-top-right-radius: 20px;
+     border-right: 1px solid #ccc;
+}
+ayral-app .languagesOption-wrp .group-view .luncherLanguageTrigger.active{
+  background:  rgba(84, 118, 82, 0.56) ;
+  border-bottom: 1px solid  rgba(84, 118, 82, 0.56);
+  color: #fff;
+}
+ayral-app .settingsLanguagesOption-wrp .group-view .settingsLanguageTrigger{
+    min-width: 100px;
+    background: #fff;
+    color: #333;
+    padding-right: 20px;
+    font-size: 12px !important;
+}
+ayral-app .settingsLanguagesOption-wrp .group-view .settingsLanguageTrigger.active{
+background-color: #2ecc71;
+  background: -moz-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
+  background: linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
+  background: -webkit-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  background: -ms-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  background: -o-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
+  border-color:  #2ecc71;
+  color: #fff;
+  color: #fff;
+}
+ayral-app .languageChange-trigger .check{
+    opacity: 0;
+}
+
+/*
+   ########## Business Start #############
+*/
+ayral-app .businessesContainer, ayral-app .offersContainer{
+    width: 100%;
+    overflow-y:hidden;
+    padding-top: 1em;
+}
+
+ayral-app .businessesContainer .businessWidget{
+      width: 100%;
+      padding: 0;
+      background: #fff;
+      display:block;
+      overflow: hidden;   
+     position: relative;
+    margin-bottom: 1.5em;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+       -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    border-bottom: 1px solid #ccc; 
+}
+
+ayral-app .headerContainer{
+    border-bottom: 1px solid #e2dfdf;
+    display:block;
+    width: 100%;
+    padding: .2em;
+    margin-top: 0;
+    background: #fff;
+    padding: 1em;
+    padding-top: 1.5em;
+    font-size: 14px;
+}
+ayral-app .headerContainer.fixed{
+    position: fixed;
+    left: 0;
+    top: 55px;
+    z-index: 200;
+}
+ayral-app .underHeader{
+  margin-top: 70px;
+}
+ayral-app .offersContainer .offerWidget{
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+ayral-app .businessesContainer .businessWidget .shopBaskt{
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    position: absolute;
+    padding: 12px;
+    top: 10px;
+    text-align: center;
+    right: 10px;
+    border: 1px solid #f5f5f5; 
+    border-bottom: 2px solid #ccc;
+    background: hsla(0, 0%, 100%, 0.78);
+    cursor: pointer;
+}
+ayral-app .offersContainer .businessWidget .buyOffer-btn{
+   width: 50px;
+    height: 40px;
+   padding: 0;
+    margin: 0;
+    width: 60px;
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+     bottom: -1px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    font-weight: bold
+    background: #fff;
+    
+}
+ayral-app .offersContainer .businessWidget .buyOffer-btn:hover{
+  font-size: 12px;
+    background: #f5f5f5;
+  
+}
+ayral-app .offersContainer .businessWidget .offerInfor{
+    width:70px;
+    padding: 5px;
+    border-radius: 99px;
+    font-weight: bold;
+    margin: auto;
+    vertical-align:inherit;
+    float: left;
+    background:none;
+    margin-top: 1em;
+     -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+       -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    border-bottom: 1px solid #ccc;
+    
+}
+ayral-app .businessesContainer .businessWidget .closeOpen-flag{
+    width: 58px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px;
+    z-index: 10;
+    border-bottom: none;
+    border-radius: 99px;
+    font-size: 8px;
+}
+ayral-app .businessesContainer .businessWidget .businessList-profile-ico{
+       width: 100%;
+       height: 150px;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(../images/sign.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+  overflow-x: hidden;
+    
+}
+ayral-app .businessesContainer .businessWidget .footer{
+      width: 100%;
+      padding: 5px 5px;
+      text-align: left;
+}
+ayral-app .businessesContainer .businessWidget .businessName-wrp,
+ayral-app .businessesContainer .businessWidget .businessRate-wrp{
+     display: inline-block;
+
+}
+ayral-app .businessesContainer .businessWidget .businessName-wrp{
+     width: 65%;
+     text-align: left;
+     text-overflow: ellipsis;   
+}
+ayral-app .businessesContainer .businessWidget .businessRate-wrp{
+     width: 30%;
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 5%;
+}
+ayral-app .businessesContainer .businessWidget .footer .company-name{
+      width: 100%;
+     font-weight: bold;
+     font-size: 12px;
+}
+@media(max-width:800px){
+  ayral-app .businessesContainer .businessWidget .businessList-profile-ico{
+    height: 300px;
+  }
+}
+@media(max-width:600px){
+  ayral-app .businessesContainer .businessWidget .businessList-profile-ico{
+    height: 200px;
+  }
+}
+@media(max-width:400px){
+  ayral-app .businessesContainer .businessWidget .businessList-profile-ico{
+    height: 110px;
+  }
+}
+
+/*
+   ########## Business End #############
+*/
+ayral-app  .inforView-container{
+    width: 100%;
+}
+ayral-app  .map-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #888;
+    left: 0;
+    right: 0;
+}
+ayral-app  .map-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #888;
+    left: 0;
+    right: 0;
+}
+ayral-app  .map-container .map{
+    width: 100%;
+    height: 85%;
+    position: relative;
+    background: #888;
+    left: 0;
+    right: 0;   
+}
+ayral-app  .map-container .locationinput-wrp{
+   width: 50%;
+   height: 30px;
+   min-height: 25px;
+   position: absolute;
+   top: 70px;
+   right: 10px;
+    z-index: 100; 
+    text-align: left;
+        transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+       -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+ayral-app  .map-container .locationinput-wrp .input-container{
+   height: 30px; 
+  border: none;
+     -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+       -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+ayral-app  .map-container .locationinput-wrp input{
+   width: 100%;
+   height: 100%;
+    padding: 0;
+    font-size: 12px;
+     display: inline-block;
+    text-align: left;
+}
+ayral-app .customersCounter{
+    padding: 5px;
+      -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+       -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    color: #5cb85c;
+    
+}
+ayral-app .paymentMethod-wrp{
+    width: 100%;
+    padding:0;
+}
+ayral-app .paymentMethod-wrp div{
+    height: 100px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-align: center;
+    padding: 10px;
+    padding-top: 15px;
+    color: #333;
+           transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+       -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    cursor: pointer;
+}
+ayral-app .paymentMethod-wrp div:hover,
+ayral-app .paymentMethod-wrp div:active{
+  font-weight: bold;
+    opacity: 0.7;
+}
+ayral-app .paymentMethod-wrp * .ico{
+   width: 30px;
+    height: 30px;
+    text-align: center;
+}
+ayral-app .cartbtn{
+    width: 120px;   
+}
+ayral-app .toCheckout-btn{
+    padding: 15px;
+    outline: none;
+    padding-right: 18px;
+    padding-left: 18px;
+    background: #fff;
+    color: #333;
+    border-radius: 99px;
+}
+ayral-app .ordersTabs-wrp{
+    width: 100%;  
+    background: #fff;
+    padding: 5px;
+    padding-top: 1em;
+    padding-bottom: 0;
+    position: fixed;
+    top: 54px;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+ayral-app .ordersTabs-wrp .nav-item{
+    padding: .8em;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-right: 1.2em;
+    font-size: 16px;
+}
+ayral-app .ordersTabs-wrp .nav-item a{
+  color: #333;
+}
+ayral-app .ordersTabs-wrp .nav-item.active,
+ayral-app .ordersTabs-wrp .nav-item:hover{
+   border: 1px solid #ccc;
+   border-bottom: none;
+   border-top-left-radius:8px;
+   border-top-right-radius:8px; 
+   color: #262626;
+   background-color: #f5f5f5;
+}
+ayral-app .ordersPanel-wrp{
+    width: 100%;  
+    text-align: inherit;
+    margin-top: 55px;
+    padding: 5px;
+}
+ayral-app .ordersPanel-wrp .orderWidget{
+    width: 100%;  
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-bottom: .8em;
+    text-align: left;
+}
+ayral-app .ordersPanel-wrp .widget-body{
+    width: 100%;
+    margin-top: -2px;
+    padding-top: 0;
+}
+ayral-app .ordersPanel-wrp .widget-body .img{
+    width: 100%;
+    height: 120px;
+    padding: 2px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.72)),url(../images/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%,100%;
+    position: relative;
+}
+ayral-app .ordersPanel-wrp .widget-body .orderContity{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;   
+    border-bottom-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+ayral-app .orderStatus-wrp{
+    position: absolute;
+    top: 15px;
+    left: 55px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;   
+    border-bottom-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+ayral-app .orderStatusInPreview-wrp{
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0;
+     transition: background 0.25s ease;
+ -webkit-transition: background 0.25s ease;
+ -moz-transition: background 0.25s ease;
+ -ms-transition: background 0.25s ease;
+  -webkit-box-shadow: 0 10px 6px -10px #000;
+       -moz-box-shadow: 0 10px 6px -10px #000;
+            box-shadow: 0 10px 6px -10px #000;   
+    border-bottom-left-radius: 5px; 
+    border-top-right-radius: 5px;
+}
+ayral-app .ordersPanel-wrp .widget-body .orderInfor-wrp{
+  padding-top: 5px;
+  text-align: left;
+  font-size: 10px;
+}
+ayral-app .ordersPanel-wrp .orderWidget .profileDetails-wrp{
+    width: 100%;  
+    margin: 0;
+    color: #262626;
+    -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+ayral-app .ordersPanel-wrp .orderWidget .profileDetails-wrp img{
+    -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    border: 1px solid #ccc;
+}
+ayral-app .ordersPanel-wrp .orderWidget .ordersFooter-wrp{
+    width: 100%;  
+    text-align: right;
+    padding-bottom: 1em;
+}
+ayral-app .ordersPanel-wrp .orderWidget .orderDue-wrp{
+    margin-left: 15px;
+    vertical-align: middle;
+    height: 30px;
+    font-size: 20px;
+    padding-top: 5px;
+}ayral-app .ordersPanel-wrp .ordersControl-btn{
+   min-width: 60px;
+   height: 30px;
+   font-size: 8px;
+    outline: none;
+     -webkit-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    -moz-box-shadow: 0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+    box-shadow:0 10px 6px -12px rgba(0, 0, 0, 0.32941176470588235);
+}
+ayral-app .signup-bg p{
+    font-size: 16px;
+    font-weight: bold;
+}
+ayral-app .loginCheck-wrp span{
+    color: #fff;
+}
+input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked, 
+input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked{
+    font-weight: bold;
+    color: #353535;
+}
+.login-view input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked, 
+.login-view input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked{
+    color: #fff;
+}
+
+ayral-app .loginCheck-wrp  input.labelauty + label > span.labelauty-unchecked-image
+{
+    border: none;
+    border-bottom: 1px solid #fff; 
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+	background: url(images/input-unchecked.png) no-repeat scroll right center;
+    background-position: center;
+}
+ayral-app .loginCheck-wrp  input.labelauty + label > span.labelauty-checked-image
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+	background: url(../images/checked.png) no-repeat scroll right center;
+    background-position: center;
+}
+.login-view ::placeholder, select{
+  font-size: 16px;
+}
+.login-view  [actas="footer"] [actas="link"]{
+  color: #fff;
+}
+.modalAlert-layer{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7400;
+    opacity: 1;
+    background: rgba(4, 4, 4, 0.76);
+}
+.modalAlert-layer .modalAlert{
+    width: 80%;
+    height: auto;
+    max-height: 40%;
+    background: #fff;
+    padding-bottom: 5px;
+    margin: auto;
+    margin-top: 50%;
+    border-radius: 5px;
+}
+.modalAlert-layer .modalAlert .header{
+    padding: 1em;
+    border-radius: 5px;
+ }
+.modalAlert-layer .modalAlert .body{
+   padding: 1em;
+}
+.modalAlert-layer .modalAlert .footer{
+    width: 100%;
+    text-align: right;
+}
+.modalAlert-layer .modalAlert .footer button{
+    outline: none;
+    min-width: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.modalAlert-layer .modalAlert .footer button:first-child{
+    margin-right: 5px;
+}

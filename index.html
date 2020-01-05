@@ -1,0 +1,973 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Klassy Mall Version1.0.0 </title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
+    <link type="text/css" rel="stylesheet" href="plugins/bootsrap/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="plugins/jalert/jAlert.css"/>
+    <link type="text/css" rel="stylesheet" href="plugins/ayral/ayral.css"/>
+    <link type="text/css" rel="stylesheet" href="plugins/icons/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="plugins/icons/simple-line-icons.css"/>
+    <link type="text/css" rel="stylesheet" href="plugins/animation/animate.css"/>
+    <link type="text/css" rel="stylesheet" href="plugins/labeauty/custom-tick.css" />
+    <link type="text/css" rel="stylesheet" href="assets/styles/responsive_slide.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/app.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/styles/preview.css" />
+    <link type="text/css" rel="stylesheet" href="assets/styles/device.css" />
+    <link type="text/css" rel="stylesheet" href="assets/styles/cart.css" />
+</head>
+<body  class="trn" name="mainBody" ng-app="app" ng-controller="main">
+<ayral-app>
+    <form action="" method="post" enctype="multipart/form-data" class="closejAlert">
+        
+        <section class="sign-container launcher launcher-bg1 animated" name="launcher1View" state="inactive">
+            <div actas="sign-view" class="sign-view launcher-view">
+                <div actas="container" class="launcher-body">
+                    <h2 class="title">WELLCOME</h2>
+                    <div actas="body">
+                        <p> When you are shopping accessories, clothing, and other products online, finding the best deal is key. While klassy mall is a useful platform for finding items at good prices with good quality.</p>
+                        <div class="badges-wrp">
+                            <div class="badgeCounter active"></div>
+                            <div class="badgeCounter "></div>
+                            <div class="badgeCounter "></div>
+                        </div>
+                        <button type="button" name="launcher1Trigger" shape="circle" class="native launcher-btn"><i icon="arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sign-container launcher launcher-bg2 animated"  name="launcher2View" state="inactive">
+            <div actas="sign-view" class="sign-view launcher-view">
+                <div actas="container" class="launcher-body" >
+                    <h2 class="title">BUY PRODUCTS ONLINE</h2>
+                    <div actas="body">
+                        <div class="data">Buy items  with simple clicks. Over 25K are currently using Klassy Mall app to buy  their products online.</div>
+
+                        <p>Stay on top of everything, even when you’re away. With Klassy Mall App everything is posible, buy your products with your smartphone.  </p>
+
+                        <p>We have everything that you need to start buying online, and we are available to support you 24/7.</p>
+
+                        <div class="badges-wrp">
+                            <div class="badgeCounter"></div>
+                            <div class="badgeCounter active"></div>
+                            <div class="badgeCounter "></div>
+                        </div>
+
+                        <button type="button" name="launcher2Trigger" shape="circle" class="native launcher-btn"><i icon="arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sign-container launcher launcher-bg3 animated"  name="launcher3View" state="inactive">
+            <div actas="sign-view" class="sign-view launcher-view">
+                <div actas="container" class="launcher-body final-launcher-body" >
+                    <div actas="body">
+                         <button type="button" shape="circle" class="success getStarted-btn">
+                            Get Started
+                         </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section actas="app" class="app mainLayout" id="ayralApp" name="app" state="inactive">
+            <!--   *** ACTION BAR START****   !-->
+            <section actas="action-bar-top" class="default action-bar-top" ng-bind-html="actionBarLayer">
+                <!--   *** END OF ACTION BAR****   !-->
+            </section>
+            <!--   *** END OF ACTION BAR****   !-->
+            <section actas="contaianer" class="drawer-container" name="drawerView" ng-bind-html="drawerLayer">
+                   <!--   *** END OF ACTION BAR****   !-->
+            </section>
+        
+            <ayral-view>
+
+                <section actas="activity" name="categoryActivity" start="top" state="active">
+                    <section class="slider-banner"  text-align="center">
+                        <div class="banner-section">
+                                <div class="banner-section">
+                                        <div class="banner">
+                                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner" role="listbox"  name="slideBannerLayer">
+                                              <img src="assets/images/loader.gif" class="slider-banner-loader">
+                                        </div>
+                                    <div class="clearfix"> </div>
+                                 </div>
+                              </div>
+                         </div>
+                        </div>
+                    </section>
+                    <section actas="search-view" class="autocomplete landingSearch-view" style="margin-top: 0;">
+                        <input type="text" class="marketSearch-master homeSearchInput"  placeholder="Search Items e.g Bags, shoes, wears" id="search-in" name="mainSearchInput" autocomplete="off">
+                        <button type="button" class="homeSearchButton" name="searchItems-trigger"><i icon="fa-search"></i></button>
+                    </section>
+                    <div actas="container" class="category-container">
+                        <ul actas="4d-layout" class="category-2dlayout" name="categoryLayout">                        
+                             <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/atamfa.jpg">
+                                <p>Fabrics</p>
+                            </li> 
+                             <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/wears.jpg">
+                                <p>Gown</p>
+                            </li>
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/lace.jpg">
+                                <p>Lace</p>
+                            </li>
+                            <li actas="layout"  class="category">
+                                <img src="assets/images/category/bags.jpg">
+                                <p>Bags</p>
+                            </li>
+                            <li actas="layout"  class="category">
+                                <img src="assets/images/category/makeup.jpg">
+                                <p>Makeup</p>
+                            </li>
+                             <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/shoe.jpg">
+                                <p>Shoes</p>
+                            </li>
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/jweliry.jpg">
+                                <p>Neckless</p>
+                            </li>
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/perfum.jpg">
+                                <p>Perfume</p>
+                            </li>
+                                                     
+                             <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/bangles.jpg">
+                                <p>Bangles</p>
+                            </li>                           
+                           
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/watch.jpg">
+                                <p>Whatches</p>
+                            </li>
+                               <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/ear-ring.jpg">
+                                <p>Ear Ring</p>
+                            </li>
+
+                             <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/kitchen.jpg">
+                                <p>Ketchen</p>
+                            </li>
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/kids.jpg">
+                                <p>Kids</p>
+                            </li>
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/cap.jpg">
+                                <p>Caps</p>
+                            </li>
+                         
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/luggage.jpg">
+                                <p>Lugagge</p>
+                            </li> 
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/furniture.png">
+                                <p>Furniture</p>
+                            </li> 
+                            <li actas="layout"  class="category"  >
+                                <img src="assets/images/category/electronics.jpg">
+                                <p>Electronics</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section actas="activity" name="ordersActivity" start="top">
+                    <div actas="container" class="orders-container ">
+                       <div class="ordersContainer"  name="ordersView" >
+                            <section actas="container" class="ordersPanel-wrp" name="orderPanel" state="active">
+                                <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                            </section>
+                        </div>
+                     </div>
+                </section>  
+                <section actas="activity" name="profileActivity" start="top" >
+                    <div actas="container" class="profile-container " name="profileView" >
+                        <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                    </div>
+                </section>
+                <section actas="activity" name="editProfileActivity" start="top" >
+                    <div actas="container" class="profile-container" name="editProfileView" ng-bind-html="editProfileLayer">
+                        <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                    </div>
+                </section>
+
+                <section  class="topPadding" actas="activity" name="marketActivity" id="marketActivity" location="Nigeria" start="top" state="inactive">
+
+                <section actas="search-view"  id="marketSearch-layer" class="autocomplete search-view marketFilter-Search">
+                        <input type="text"  class="marketSearch-master" placeholder="Search Items e.g Bags, shoes, wears" id="marketSearch-in" name="marketSearch-in" autocomplete="off">
+                        <button type="button" name="marketSearch-trigger"><i icon="fa-search"></i></button>
+                    </section>
+                    <div class="marketView-container paddingBody"   id="marketView-layer"  actas="container" name="marketView" >
+                        <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                    </div>
+                    <div class="loadMore-loader" id="market-moreLoader" style="display: none" text-align="center">
+                       <img src="assets/loaders/loader_2.gif">
+                    </div>
+                </section>
+
+                <section   class="topPadding"  actas="activity" name="productActivity" start="top">
+                    <section actas="search-view" class="autocomplete search-view">
+                        <input type="text" placeholder="Search products" id="productSearch-in" name="productSearch-in" autocomplete="off" style="padding-left: 5px;">
+                        <button type="button" name="productSearch-trigger"><i icon="fa-search"></i></button>
+                    </section>
+                    <div actas="container" class="topMargin topPading paddingBody" name="productView" >
+                        <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                    </div>
+                    <div class="loadMore-loader" id="product-moreLoader" style="display: none" text-align="center">
+                       <img src="assets/loaders/loader_2.gif">
+                    </div>
+                </section>
+
+                <section class="topPadding"  actas="activity" name="sellActivity" start="top">
+                    <div actas="container" class="upload-container">
+                        <div actas="header" class="upload-header" >
+                            <section class="selcted-sample-view">
+                                <section class="selected-samples-wrp"  state="active">
+                                    <div class="uploadPreview-wrapper view1"  onclick="choosePhoto(this)">
+                                      <img vindex="1"  src="assets/images/camera.png" onerror="onImageError(this);"> 
+                                       <div class="loaderWrapper loader1"><img src="assets/images/loader.gif"></div>
+                                    </div> 
+                                    <div class="uploadPreview-wrapper view2">
+                                      <img vindex="2"  src="assets/images/camera.png" onerror="onImageError(this);"> 
+                                       <div class="loaderWrapper loader2"><img src="assets/images/loader.gif"></div>
+                                    </div> 
+                                    <div class="uploadPreview-wrapper view3">
+                                      <img vindex="3"  src="assets/images/camera.png" onerror="onImageError(this);" > 
+                                       <div  class="loaderWrapper loader3"><img src="assets/images/loader.gif"></div>
+                                    </div> 
+                                    <div class="uploadPreview-wrapper view4">
+                                      <img vindex="4"  src="assets/images/camera.png" onerror="onImageError(this);"> 
+                                       <div class="loaderWrapper loader4"><img src="assets/images/loader.gif"></div>
+                                    </div> 
+                                    <div class="uploadPreview-wrapper view5">
+                                      <img vindex="5"  src="assets/images/camera.png" onerror="onImageError(this);"> 
+                                       <div class="loaderWrapper loader5"><img src="assets/images/loader.gif"></div>
+                                    </div>  
+                                    <div class="uploadPreview-wrapper view6">
+                                      <img vindex="6"  src="assets/images/camera.png" onerror="onImageError(this);"> 
+                                       <div class="loaderWrapper loader6"><img src="assets/images/loader.gif"></div>
+                                    </div> 
+                                     <div class="uploadPreview-wrapper view7">
+                                      <img vindex="7"  src="assets/images/camera.png" onerror="onImageError(this);"> 
+                                       <div class="loaderWrapper loader7"><img src="assets/images/loader.gif"></div>
+                                    </div> 
+                                   <div class="uploadPreview-wrapper view8">
+                                      <img vindex="8"  src="assets/images/camera.png" onerror="onImageError(this);"> 
+                                       <div class="loaderWrapper loader8"><img src="assets/images/loader.gif"></div>
+                                    </div> 
+                                </section>
+                            </section>
+                        </div>
+                        <div actas="body" class="upload-body">
+                            <input type="text" class="capitalize" name="i-name" id="i-name" placeholder="Item Name">
+                            <div class="autocomplete">
+                                <input type="text" class="capitalize"  autocomplete="off"  name="i-category"  id="i-category" placeholder="Item Category">
+                            </div>
+                             <div actas="2d-layout" class="upload-2dLayout" style="margin-top: 0;margin-bottom: 0;">
+                                <div actas="layout" class="layout">
+                                     <div class="autocomplete">
+                                        <input type="text" class="capitalize city-input" placeholder="Target City" autocomplete="off"  name="i-location" id="i-location">
+                                    </div>
+                                 </div>
+                                 <div actas="layout" class="layout">
+                                    <div class="autocomplete">
+                                    <input type="text"  class="capitalize area-input" placeholder="Target Area" autocomplete="off"  name="i-area" id="i-area">
+                                    </div>
+                                 </div>
+                            </div>
+                            <input type="text"name="i-price" id="i-price" placeholder="Price">
+                             <div actas="2d-layout" class="upload-2dLayout" style="margin-top: 5px">
+                                <div actas="layout" class="layout">
+                                    <select  class="required" name="i-gender" id="i-gender">
+                                    <option value="null" selected>Gender</option> 
+                                        <option>Male</option> 
+                                        <option>Female</option>
+                                        <option>Both</option>
+                                    </select>
+                                </div>
+                                <div actas="layout" class="layouts">
+                                    <select class="required"  name="i-target" id="i-target">
+                                      <option value="null" selected>Target</option> 
+                                        <option>Ladies</option> 
+                                        <option>Children</option>
+                                        <option>Men</option> 
+                                        <option>Boys</option> 
+                                        <option>Kids</option> 
+                                        <option>Both</option>
+                                    </select>
+                                </div>
+                                <div actas="layout">
+                                    <select  class="required" type="text" name="i-condition" id="i-condition">
+                                        <option selected>New</option>
+                                        <option>Old</option>
+                                        <option>Used</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div actas="2d-layout" class="upload-2dLayout">
+                                <div actas="layout">
+                                    <select  class="required" type="text" name="i-quantity" id="i-quantity">
+                                        <option value="null" selected>Contity</option>
+                                        <option>Single</option>
+                                        <option>Multiple</option>
+                                    </select>
+                                </div>
+                               <div actas="layout" class="layout">
+                                    <select class="required"  name="i-discount" id="i-discount" style="height: 60px">
+                                      <option selected>No Discount</option> 
+						              <option value="2">2% Discount</option> 
+						              <option value="3">3% Discount</option> 
+						              <option value="4">4% Discount</option> 
+						              <option value="5">5% Discount</option> 
+						              <option value="6">6% Discount</option>
+						              <option value="7">7% Discount</option>  
+						              <option value="8">8% Discount</option> 
+						              <option value="9">9% Discount</option> 
+						              <option value="10">10% Discount</option> 
+						              <option value="11">11% Discount</option> 
+						              <option value="12">12% Discount</option> 
+						              <option value="13">13% Discount</option>
+						              <option value="14">14% Discount</option> 
+						              <option value="15">15% Discount</option> 
+						              <option value="16">16% Discount</option> 
+						              <option value="17">17% Discount</option>
+						              <option value="18">18% Discount</option> 
+						              <option value="19">19% Discount</option> 
+						              <option value="20">20% Discount</option> 
+						              <option value="21">21% Discount</option>
+						              <option value="22">22% Discount</option>
+						              <option value="23">23% Discount</option> 
+						              <option value="20">24% Discount</option>
+						              <option value="25">25% Discount</option> 
+						              <option value="26">26% Discount</option> 
+						              <option value="27">27% Discount</option> 
+						              <option value="28">28% Discount</option>
+						              <option value="29">29% Discount</option>
+						              <option value="30">30% Discount</option>
+						              <option value="31">31% Discount</option> 
+						              <option value="32">32% Discount</option>
+						              <option value="33">33% Discount</option> 
+						              <option value="34">34% Discount</option> 
+						              <option value="35">35% Discount</option> 
+						              <option value="36">36% Discount</option>
+						              <option value="37">37% Discount</option>
+						              <option value="38">38% Discount</option>
+						              <option value="39">39% Discount</option> 
+						              <option value="40">40% Discount</option> 
+						              <option value="41">41% Discount</option> 
+						              <option value="42">42% Discount</option>
+						              <option value="43">43% Discount</option> 
+						              <option value="44">44% Discount</option>
+						              <option value="45">45% Discount</option>
+						              <option value="46">46% Discount</option> 
+						              <option value="47">47% Discount</option> 
+						              <option value="48">48% Discount</option> 
+						              <option value="49">49% Discount</option>
+						              <option value="50">50% Discount</option> 
+						              <option value="51">51% Discount</option> 
+						              <option value="52">52% Discount</option> 
+						              <option value="53">53% Discount</option> 
+						              <option value="54">54% Discount</option> 
+						              <option value="55">55% Discount</option> 
+						              <option value="56">56% Discount</option>
+						              <option value="57">57% Discount</option>  
+						              <option value="58">58% Discount</option> 
+						              <option value="59">59% Discount</option> 
+						              <option value="60">60% Discount</option> 
+						              <option value="61">61% Discount</option> 
+						              <option value="62">62% Discount</option> 
+						              <option value="63">63% Discount</option>
+						              <option value="64">64% Discount</option> 
+						              <option value="65">65% Discount</option> 
+						              <option value="66">66% Discount</option> 
+						              <option value="67">67% Discount</option>
+						              <option value="68">68% Discount</option> 
+						              <option value="69">69% Discount</option> 
+						              <option value="70">70% Discount</option> 
+						              <option value="71">71% Discount</option>
+						              <option value="72">72% Discount</option>
+						              <option value="73">73% Discount</option> 
+						              <option value="74">74% Discount</option>
+						              <option value="75">75% Discount</option> 
+						              <option value="76">76% Discount</option> 
+						              <option value="77">77% Discount</option> 
+						              <option value="78">78% Discount</option>
+						              <option value="79">79% Discount</option>
+						              <option value="80">80% Discount</option>
+						              <option value="81">81% Discount</option> 
+						              <option value="82">82% Discount</option>
+						              <option value="83">83% Discount</option> 
+						              <option value="84">84% Discount</option> 
+						              <option value="85">85% Discount</option> 
+						              <option value="86">86% Discount</option>
+						              <option value="87">87% Discount</option>
+						              <option value="88">88% Discount</option>
+						              <option value="89">89% Discount</option> 
+						              <option value="90">90% Discount</option> 
+						              <option value="91">91% Discount</option> 
+						              <option value="92">92% Discount</option>
+						              <option value="93">93% Discount</option> 
+						              <option value="94">94% Discount</option>
+						              <option value="95">95% Discount</option>
+						              <option value="96">96% Discount</option> 
+						              <option value="97">97% Discount</option> 
+						              <option value="98">98% Discount</option> 
+						              <option value="99">99% Discount</option>
+										</select>
+                                </div>
+                                <div actas="layout" class="layout">
+                                    <select class="required" name="i-warranty" id="i-warranty">
+                                    <option selected>No warranty</option>
+                                    <option>7 days warranty</option> 
+                                    <option>14 days warranty</option> 
+                                    <option>21 days warranty</option> 
+                                    <option>1 month warranty</option> 
+                                    <option>2 months warranty</option> 
+                                    <option>3 months warranty</option> 
+                                    <option>4 months warranty</option> 
+                                    <option>5 months warranty</option> 
+                                    <option>6 months warranty</option> 
+                                    <option>7 months warranty</option> 
+                                    <option>8 months warranty</option> 
+                                    <option>9 months warranty</option> 
+                                    <option>10 months warranty</option> 
+                                    <option>11 months warranty</option> 
+                                    <option>12 months warranty</option> 
+                                    <option>More than 1 Year warranty</option> 
+								</select>
+                                </div>
+                            </div>
+                            <textarea name="i-description" id="i-description" class="description" wrap="hard" placeholder="Description"></textarea>
+                            <div class="alert alert-warning warnningAlert " transition="shake" role="alert">
+                                This is a warning alert—check it out!
+                            </div>
+                            <div class="alert alert-success successAlert " transition="shake" role="alert">
+                                This is a warning alert—check it out!
+                            </div>
+                            <button style="width: 150px;" type="button" shape="circle" class="success post-btn" name="continue-trigger">Continue</button>
+                        </div>
+                    </div>
+                </section>
+                <section actas="activity" name="moreActivity" state="inactive" start="top" >
+                    <div class="headerContainer">
+                        Add more options 
+                        <span class="icon-arrow-right" style="font-size:6px"></span>
+                    </div>
+                    <div actas="container" class="report-container">
+                      <div actas="body" >
+                        <div class="graph-visual">
+						 <div class="check-wrp colorsManager">
+							<p style="font-weight: bold;">Select Avaialable Colors</p>
+							 <div class="inline-check" >
+                                <input type="checkbox" data-labelauty=" " name="noneColor" id="noneColor" alt="None"> 
+                                <span class="text" style="color:">None</span>
+                             </div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Red"> <span class="text" style="color:red">Red</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="White"> <span class="text" style="color:#fff">White</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Blue"> <span class="text" style="color:blue">Blue</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Black"> <span class="text" style="color:black">Black</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Green"> <span class="text" style="color:green">Green</span></div>
+							 
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Yellow"> <span class="text" style="color:yellow">Yellow</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Pink"> <span class="text" style="color:#ea57a3">Pink</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Aqua"> <span class="text" style="color:#00ffff">Aqua</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Silver"> <span class="text" style="color:#e7db03">Silver</span></div>
+							
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Brown"> <span class="text" style="color:#993300">Brown</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Crimson"> <span class="text" style="color:#dc143c">Crimson</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Gray"> <span class="text" style="color:gray">Gray</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Corel"> <span class="text" style="color:#ff3800">Coral</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Desert"> <span class="text" style="color:#c19a6b">Desert</span></div> 
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="Purple"> <span class="text" style="color:#bf00ff">Purple</span></div>
+                            <div class="inline-check">
+                                <input type="checkbox" data-labelauty=" " class="mycheckbox" alt="navy">
+                                <span class="text" style="color:#062a78">Navyblue</span></div>
+                             <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="skyblue"> <span class="text" style="color:#062a78">Skyeblue</span></div>
+							 <textarea class="description" name="i-colors" id="i-colors" placeholder="Add available colors, example Color,Color,Color"></textarea>
+						</div>
+				        <div class="check-wrp sizesManager">
+							<p style="font-weight: bold;">Select Avaialable Sizes</p>
+						    <div class="inline-check" >
+                                <input type="checkbox" data-labelauty=" " name="noneSize" id="noneSize"> 
+                                <span class="text">None</span>
+                            </div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="XS">
+								<span class="text" >XS</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="S"> 
+								<span class="text" >S</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="M">
+								<span class="text" >M</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="L"> 
+								<span class="text" >L</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="XL">
+								<span class="text" >XL</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="XXL">
+								<span class="text" >XXL</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="S/M"> 
+								<span class="text" >S/M</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="M/L">
+								<span class="text" >M/L</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="L/XL"><span class="text" >XXXL</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="XS/S">
+								<span class="text" >XS/S</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="30"> 
+								<span class="text" >30</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="35">
+								<span class="text" >35</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="40"><span class="text" >40</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="42">
+								<span class="text" >42</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="43"> 
+								<span class="text" >43</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="44">
+				            <span class="text" >44</span></div>
+							<div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="45"><span class="text" >45</span></div>
+							 <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="50"><span class="text" >50</span></div>
+							  <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="55"><span class="text" >55</span></div> 
+							  <div class="inline-check"><input type="checkbox" data-labelauty=" " class="mycheckbox" alt="60"><span class="text" >60</span></div>
+							 <textarea class="description" id="i-sizes" name="i-sizes" placeholder="Add available sizes, example  XL,L,76,45"></textarea>
+							</div>
+                        </div>
+                      </div>
+                     <button type="button" shape="circle" class="success post-btn" name="publish-item-trigger">Publish</button>
+                    </div>
+               </section>
+            <section actas="activity" name="complainActivity" start="top" >
+                     <div class="headerContainer fixed">
+                        Complain <span class="icon-arrow-right" style="font-size:6px"></span>
+                    </div>
+                    <div actas="container" class="report-container underHeader">
+                        <div actas="body" class="upload-body">
+                            <input type="text" name="co-subject" placeholder="Subject"  class="in capitalize">
+                            <textarea name="co-description" class="description" wrap="hard" style="height: 300px" placeholder="Type your Complain here.."></textarea>
+                            <div class="alert alert-warning warnningAlert " transition="shake" role="alert">
+                                This is a warning alert—check it out!
+                            </div>
+                            <div class="alert alert-success successAlert " transition="shake" role="alert">
+                                This is a warning alert—check it out!
+                            </div>
+                            <button type="button" shape="circle" class="success post-btn" name="sendComplain-trigger">Send</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section actas="activity" name="previewActivity" start="top"  >
+                    <div actas="container" class="preview" name="itemPreview-layer">
+                        <div actas="container" style="padding: .5em;"  >
+                            <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                        </div>
+                    </div>
+                </section>
+                <section actas="activity" name="orderPreviewActivity" start="top" >
+                    <div actas="container" class="preview" name="orderPreview-layer">
+                        <div actas="container" style="padding: .5em;"  >
+                            <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                        </div>
+                    </div>
+                </section>
+
+                <section   class="topPadding"  actas="activity" name="orderActivity" start="top">
+                     <div class="headerContainer fixed">
+                         Make New Order <span class="icon-arrow-right" style="font-size:6px"></span>
+                    </div>
+                    <div actas="container" class="preview underHeader" name="orderPreview-layer" >
+                        <section actas="form-group" class="orderForm-wrp">
+                            <div actas="header" class="order-header">
+                                <div actas="group-view" name="o-prepared-details-wrp" style="width: 100%">
+                                    <div>
+                                    <h2 style="text-align:left; padding-top:5px; font-weight:bold; margin-left:-6px;">Total <mark style="padding-left: 10px; padding-right: 10px; background: #fff; color: #25bb65" shape="circle" class="info" name="o-prepared-Amount">0.00</mark></h2><br/>
+                                        <p style="paddin-top:5px;"><i class="icon-location-pin" style="font-size:8px;"></i><b name="orderDeliveryCity">Kano</b></p>
+                                    </div>
+                                    <div actas="view" style="position: absolute;right: 10px; ">
+                                     <select style="min-width:100px;" class="deliveryLocations" name="deliveryLocations" onchange="deliveryLocationSelected(this);"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div actas="body" class="comment-body">
+                                <input type="text" placeholder="Name" name="o-prepared-name">
+                                <input type="text" placeholder="Address Line 1" name="o-prepared-address1">
+                                <input type="text" placeholder="Address Line 2" name="o-prepared-address2">
+                                <input type="tel"  placeholder="Alternative Mobile Number" name="o-prepared-number">
+                                <textarea class="description" wrap="hard" placeholder="Special notes for your order" name="o-prepared-description"></textarea>
+                                <div class="alert alert-warning warnningAlert " transition="shake" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <div class="col-md-12 col-xs-12" style="margin:0; padding:0; margin-bottom: 1em;">
+                                    <div class="address-accuracy">
+                                        <h3>Address Accuracy</h3>
+                                        <p>Make sure you get your stuff! If the address is not entered correctly, your package may be returned as undeliverable. You would then have to place a new order. Save time and avoid frustration by entering the address information in the appropriate boxes and double-checking for typos and other errors. Need help? Click for address tips:</p>
+                                    </div>
+                                </div>
+                                <div actas="wrapper" class="check">
+                                 <input type="checkbox" name="o-terms"  data-labelauty="Accept Terms"/>
+                                </div>
+                                <button type="button" shape="circle" method="001" style="float:right; min-width: 150px;" class="success placeOrder-trigger post-btn" name="o-prepared-trigger">Continue</button>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section  class="topPadding"  actas="activity" name="cartActivity" start="top" state="inactive">
+                    <div actas="container" class="container">
+                        <div class="headerContainer fixed">
+                         Continue to checkout <span class="icon-arrow-right" style="font-size:6px"></span>
+                        </div>
+                        <div class="table  cart-container underHeader"> 
+                            <section class="cart-items" name="cartPanel">
+                                <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                            </section>                             
+                      </div>
+                    </div>
+                </section>
+                <section  class="topPadding"  actas="activity" name="publishedActivity" start="top">
+                    <div actas="container" class="preview"  ng-bind-html="publishedActivity">
+                        <loadingBar ng-bind-html="loadingBody"></loadingBar>
+                    </div>
+                </section>
+                <section class="topPadding" actas="activity" name="paymentCanceledActivity" start="top">
+                    <div actas="container" style="padding:10px">
+                         <div class="headerContainer fixed">
+                         Payment Windwo Closed <span class="icon-arrow-right" style="font-size:6px"></span>
+                        </div>
+                        <section class="underHeader">
+                        <div actas="sign-view" class="sign-view inforView-container">
+                           <div actas="container" style="padding:1em;padding-bottom: 10px; text-align: left">
+                               <span>Oops! you just canceled the Payment, please contact us if you are having any challenges.</span> <br/><br/><b target="tel:80000000000">+(234) 80000000000</b>
+                           </div>
+                           <div actas="footer" class="footer links">
+
+                               <span actas="link" class="link" onclick="loadGeneralProducts('OPEN');"><i class="icon-basket"></i> Continue Shopping</span>
+                               <span actas="link" class="link"  onclick="prepareCartActivity(1);">Thanks</span>
+                           </div>
+                         </div>
+                        </section>
+                    </div>
+                </section> 
+                <section class="topPadding" actas="activity" name="paymentFailedActivity" start="top">
+                    <div actas="container" style="padding:10px">
+                         <div class="headerContainer fixed">
+                        Transection Failed<span class="icon-arrow-right" style="font-size:6px"></span>
+                        </div>
+                        <section class="underHeader">
+                        <div actas="sign-view" class="sign-view inforView-container">
+                           <div actas="container" style="padding:1em;padding-bottom: 10px; text-align: left">
+                               <span>We are unable to take payment, please contact our customer support below for more information or <b>try again</b>.</span> <br/><br/><b target="tel:80000000000">+(234) 80000000000</b>
+                           </div>
+                           <div actas="footer" class="footer links">
+
+                               <span actas="link" class="link" onclick="loadGeneralProducts('OPEN');"><i class="icon-basket"></i> Continue Shopping</span>
+                               <span actas="link" class="link"  onclick="prepareCartActivity(1);">Thanks</span>
+                           </div>
+                         </div>
+                        </section>
+                    </div>
+                </section> 
+                <section class="topPadding" actas="activity" name="paymentSuccessfulActivity" start="top">
+                    <div actas="container" style="padding:10px">
+                         <div class="headerContainer fixed">
+                        Payment Completed<span class="icon-arrow-right" style="font-size:6px"></span>
+                        </div>
+                        <section class="underHeader">
+                        <div actas="sign-view" class="sign-view inforView-container">
+                           <div actas="container" style="padding:1em;padding-bottom: 10px; text-align: left">
+                               <span>Your order as been placed, we will contact you to plan the delivery of the product shortly.</span> <br/><br/><b target="tel:80000000000">+(234) 80000000000</b>
+                           </div>
+                           <div actas="footer" class="footer links">
+
+                               <span actas="link" class="link" onclick="loadGeneralProducts('OPEN');"><i class="icon-basket"></i> Continue Shopping</span>
+                               <span actas="link" class="link"  onclick="prepareCartActivity(1);">Thanks</span>
+                           </div>
+                         </div>
+                        </section>
+                    </div>
+                </section> 
+                <section class="topPadding" actas="activity" name="paymentActivity" start="top" >
+                    <div actas="container" >
+                        <div class="headerContainer fixed">
+                          Payment Method <span class="icon-arrow-right" style="font-size:6px"></span>
+                        </div>
+                        <section actas="2d-layout" class="paymentMethod-wrp underHeader">
+                         <div actas="layout" type="button"  onclick="transferPayment(this);">
+                             <img src="assets/images/transfer.png" class="ico">
+                             <p>Transfer</p>
+                         </div>
+                         <div actas="layout" class="active" type="button" onclick="payOnline(this);">
+                             <img src="assets/images/card.png" class="ico">
+                             <p> Pay Online</p>
+                         </div> 
+                         <div actas="layout" type="button"  onclick="payAtBank(this);">
+                              <img src="assets/images/bank.png" class="ico">
+                             <p>Pay at Bank</p>
+                         </div> 
+                        <div actas="layout" type="button"  onclick="Javascript:alert('Comming Soon...')">
+                              <img src="assets/images/bank.png" class="ico">
+                             <p>Cash on Delivery</p>
+                         </div>
+                        </section>
+                    </div>
+                </section>
+                <section class="topPadding" actas="activity" name="payOnlineActivity" start="top" >
+                    <div actas="container" >
+                        <div class="headerContainer fixed" >
+                          Add Payment Online <span class="icon-arrow-right" style="font-size:6px"></span>
+                        </div>
+                        <section class="paymentMethod-wrp underHeader" style="text-align: center; position: fixed; top:0%">
+                          <h2 style="margin-top: 30%; color: #25bb65;" class="addPayment-total">
+                          <i class="fa fa-naira"></i>0.0,000</h2>
+                         <div actas="layout" type="button" style="width:60%; position: fixed; top: 40%;left: 20%; border-bottom: 1px solid #25bb65" onclick="addPayment(this);">
+                             <img src="assets/images/card.png" class="ico">
+                             <p> Add Payment</p>
+                         </div> 
+                        </section>
+                    </div>
+                </section>
+                <section class="topPadding" actas="activity" name="transferPaymentActivity" start="top">
+                    <div actas="container" >
+                        <div class="headerContainer fixed" >
+                          Submit Payment <span class="icon-arrow-right" style="font-size:6px"></span>
+                        </div>
+                        <section class=" underHeader">
+                          <h2 style="margin-top: 20%; color: #25bb65; text-align: center" class="addPayment-total">
+                             <i class="fa fa-naira"></i>0.0,000</h2>
+                             <div actas="body" class="comment-body">
+                                <input type="text" placeholder="Account Name" name="">
+                                <input type="text" placeholder="Transfer Ref No." name="">
+                                 <div actas="group-view">
+                                  <select type="text" placeholder="Bank" name="">
+                                    <option>Bank Type</option>  
+                                    <option>GTBank</option>  
+                                    <option>Access</option>
+                                    <option>Facebank</option> 
+                                    <option>Union</option> 
+                                    <option>Unity</option> 
+                                  </select>
+                                  <input type="text" placeholder="Mobile Number" name="">
+                                 </div>
+                                <div actas="wrapper" class="check" style="padding-top: 1em;">
+                                   <input type="checkbox" name="o-terms"  data-labelauty="Accept Terms"/>
+                                </div>
+                                <button type="button" shape="circle" method="001" style="float:right; min-width: 150px;" class="success placeOrder-trigger post-btn" name="">Place Order</button>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section class="topPadding" actas="activity" name="payAtBankActivity" start="top" >
+                    <div actas="container" >
+                        <div class="headerContainer fixed" >
+                           Payment Teller<span class="icon-arrow-right" style="font-size:6px"></span>
+                        </div>
+                        <section class=" underHeader">
+                          <h2 style="margin-top: 20%; color: #25bb65; text-align: center" class="addPayment-total">
+                             <i class="fa fa-naira"></i>0.0,000</h2>
+                             <div actas="body" class="comment-body">
+                                <input type="text" placeholder="Account Name" name="">
+                                <input type="text" placeholder="Teller Ref No." name="">
+                                 <div actas="group-view">
+                                  <select type="text" placeholder="Bank" name="">
+                                    <option>Bank Type</option>  
+                                    <option>GTBank</option>  
+                                    <option>Access</option>
+                                    <option>Facebank</option> 
+                                    <option>Union</option> 
+                                    <option>Unity</option> 
+                                  </select>
+                                  <input type="text" placeholder="Mobile Number" name="">
+                                 </div>
+                                <div actas="wrapper" class="check" style="padding-top: 1em;">
+                                   <input type="checkbox" name="o-terms"  data-labelauty="Accept Terms"/>
+                                </div>
+                                <button type="button" shape="circle" method="001" style="float:right; min-width: 150px;" class="success placeOrder-trigger post-btn" name="">Place Order</button>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+                <section   class="topPadding" actas="activity" name="settingsActivity" start="top">
+                    <div class="headerContainer fixed">
+                        Change Language <span class="icon-arrow-right" style="font-size:6px"></span>
+                    </div>
+                    <div class="underHeader" actas="container" >
+                        <div actas="header" class="settingsLanguagesOption-wrp"  >
+                            <div actas="group-view" class="group-view data">
+                                <button type="button" class="settingsLanguageTrigger languageChange-trigger hausaLanguage" lang="HAUSA">
+                                  <i class="fa fa-check check"></i> Hausa
+                                </button>
+                                <button type="button" class="settingsLanguageTrigger languageChange-trigger englishLanguage active" lang="ENGLISH" disabled>
+                                  <i class="fa fa-check check"></i> English
+                                </button>
+                            </div>
+                        </div>
+                     </div>                           
+                </section> 
+                <section   class="topPadding" actas="activity" name="aboutActivity" start="top">
+                    <div class="headerContainer fixed">
+                        About Us <span class="icon-arrow-right" style="font-size:6px"></span>
+                    </div>
+                    <div class="underHeader" actas="container" >
+                        <div actas="sign-view" class="sign-view inforView-container">
+                           <div actas="container" style="padding:1em;padding-bottom: 10px; text-align: left">
+                               <p>R&Z online market is an e-commerce registered company based in kano, Nigeria. It was Founded in 2018.  R&Z online market focussed on selling products of India, China, Dubai, Malaysia Turkey and many more countries in a wholesale and retail price to every customer.</p>
+
+                                <p><br/></p>
+                                <p>Name: <b>R&Z Online Market</b></p> 
+                                <p>Version: <b>1.0.0</b></p>
+
+                           </div>
+                           <div actas="footer" class="footer links">
+
+                               <span actas="link" class="link" onclick="loadGeneralProducts('OPEN');"><i class="icon-basket"></i> Shop Now</span>
+                               <span actas="link" class="link"  target="$categoryActivity">Thanks</span>
+                           </div>
+                         </div>
+                     </div>                           
+                </section>  
+                <section   class="topPadding" actas="activity" name="contactActivity" start="top">
+                    <div class="headerContainer fixed">
+                        Contact Us <span class="icon-arrow-right" style="font-size:6px"></span>
+                    </div>
+                    <div class="underHeader" actas="container" >
+                            <div actas="container" >
+                            <div actas="panel" class="profile-info-list">
+                                        <div actas="content">
+                                            <div actas="data" class="data-list">
+                                               <div class="data">
+                                                  <div class="inner-data-ico" target="tel:+919116374278"><i class="icon-phone"></i> </div>
+                                                  <div class="inner-data"> (+91) 9116374278</div>
+                                                </div>
+                                            </div>
+                                            <div actas="data" class="data-list next">
+                                                <div class="data">
+                                                    <div class="inner-data-ico" target="mailto:info@randzonlinemarket.com">
+                                                        <i class="icon-envelope"></i></div>
+                                                    <div class="inner-data">info@randzonlinemarket.com</div>
+                                                  </div> 
+                                            </div> 
+
+                                            <div actas="data" class="data-list">
+                                               <div class="data">
+                                                   <div class="inner-data-ico" target="map:No C 16 Gidan Yaya. Yahaya Gusau Road, Gadon kaya Kano."><i class="icon-home"></i></div>
+                                                   <div class="inner-data">No C 16 Gidan Yaya. Yahaya Gusau Road, Gadon kaya Kano.</div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                  </div>
+                             </div>
+                            <div actas="sign-view" class="sign-view inforView-container">
+                            <div actas="body" class="upload-body">
+                                <input type="text" name="co-subject" placeholder="Subject"  class="in capitalize">
+                                <textarea name="co-description" class="description" wrap="hard" style="height: 300px" placeholder="Type your Message here.."></textarea>
+                                <div class="alert alert-warning warnningAlert " transition="shake" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <div class="alert alert-success successAlert " transition="shake" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <button type="button" shape="circle" class="success post-btn" name="sendComplain-trigger">Send</button>
+                            </div>
+                           </div>     
+                    </div>
+                </section>
+            </ayral-view>
+            <!-- *****ACTION BAR BOTTOM START **** !-->
+            <div actas="action-bar-bottom" class="animated" id="action-bar-bottom">
+                <section actas="action-bar-bottom" class="action-bar-bottom" name="tabsView" ng-bind-html="tabsPanel">
+                   <img src="assets/images/loader.gif" class="slider-banner-loader">
+                </section>
+            </div>
+            <section class="modalAlert-layer" state="inactive" id="confirmModalAlert">
+                <div class="modalAlert">
+                   <div actas="header" class="header">
+                       Klassy Mall App
+                   </div>
+                   <div actas="body" class="body">
+                       Are you sure to delete this item from your cart?
+                   </div>
+                   <div actas="footer" class="footer">
+                       <button type="button" style="margin-left: 10px;" class="btn success " onclick="removeItemFromCart();">Yes</button>
+                       <button type="button" class="btn No">No</button>
+                   </div>
+                </div>
+           </section>
+        </section>
+    </form>
+</ayral-app>
+</body>
+</html>
+<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="plugins/bootsrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugins/jquery/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="plugins/jalert/jAlert.js"></script>
+<script type="text/javascript" src="plugins/jalert/jAlert-functions.js"></script>
+<script type="text/javascript" src="plugins/ayral/ayral.js"></script>
+<script type="text/javascript" src="plugins/angular/angular.js"></script>
+<script type="text/javascript" src="plugins/angular//angular-route.js"></script>
+<script type="text/javascript" src="plugins/angular/angular-sanitize.js"></script>
+<script type="text/javascript" src="plugins/labeauty/custom-tick.js"></script>
+<script type="text/javascript" src="assets/scripts/app.attribute-change.js"></script>
+<script type="text/javascript" src="assets/scripts/app.config.js"></script>
+<script type="text/javascript" src="assets/scripts/app.enhausa-api.js"></script>
+<script type="text/javascript" src="assets/scripts/app.translation-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.autocomplete.js"></script>
+<script type="text/javascript" src="assets/scripts/app.autocomplete-module.js"></script>
+<script type="text/javascript" src="assets/scripts/ui/app.profile-activity.js"></script>
+<script type="text/javascript" src="assets/scripts/ui/app.market-activity.js"></script>
+<script type="text/javascript" src="assets/scripts/ui/app.product-activity.js"></script>
+<script type="text/javascript" src="assets/scripts/ui/app.orders-activity.js"></script>
+<script type="text/javascript" src="assets/scripts/ui/app.preview-acitivity.js"></script>
+<script type="text/javascript" src="assets/scripts/ui/app.orderPreview-activity.js"></script>
+<script type="text/javascript" src="assets/scripts/ui/app.cart-activity.js"></script>
+<script type="text/javascript" src="assets/scripts/ui/app.general-ui-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.location-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.search-item.js"></script>
+<script type="text/javascript" src="assets/scripts/app.issues-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.upload-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.profile-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.cart-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.order-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.location-module.js"></script>
+<script type="text/javascript" src="assets/scripts/app.main-module.js"></script>
+<script type="text/javascript" src="assets/scripts/voguePay.js"></script>
+<script type="text/javascript" src="assets/scripts/app.payment-modul.js"></script>
+<script type="text/javascript">
+var backup=window.location.hash.toString();
+if(backup!='' && backup!=null && typeof backup != typeof undefined){
+    backup=backup.replace('#','');
+    var backupDUMP=app.parse(storage.getItem(backup));
+
+    if(sessionExist){
+        if(backup=='orderActivity'){
+            if(backupDUMP!=false){
+                Prepare('.placeOrder-trigger').setAttribute('itemid',backupDUMP.id);
+                Prepare('.placeOrder-trigger').setAttribute('contity',backupDUMP.contity); 
+                Prepare('$o-prepared-itemDetail').setHtml(backupDUMP.name+' <mark class="success"><i class="fa fa-naira"></i> '+backupDUMP.price+'</mark>'); 
+                Prepare('$o-prepared-name').setValue(user.name);
+                Prepare('$o-prepared-address1').setValue(user.address); 
+                Prepare('$o-prepared-trigger').setAttribute('item',backupDUMP.id);
+                Prepare('$o-prepared-details-wrp').show();
+                app.render('$orderActivity');
+            }
+        }else{
+            app.render('$'+backup);
+        }
+    }
+}
+</script>
+
+
+  
