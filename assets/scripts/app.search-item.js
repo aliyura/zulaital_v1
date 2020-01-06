@@ -259,7 +259,7 @@ ayral.prepare(function(){
         var req=Prepare(this).getText();
         req=req.toString().trim();
         var tmpReq=dictionary.translate(req);
-        var url=hostname+'/server/ui/app.market-activity.php?request='+req+'&treq='+tmpReq+'&id='+session;    
+        var url=hostname+'/server/ui/app.market-items-ui.php?request='+req+'&treq='+tmpReq+'&id='+session;    
         searchItem(url,req);
         app.render('$marketActivity');
    });
@@ -270,7 +270,7 @@ ayral.prepare(function(){
            
          req=req.toString().trim();
          var tmpReq=dictionary.translate(req);
-         var url=hostname+'/server/ui/app.market-activity.php?request='+req+'&treq='+tmpReq+'&id='+session;    
+         var url=hostname+'/server/ui/app.market-items-ui.php?request='+req+'&treq='+tmpReq+'&id='+session;    
          searchItem(url,req);
          app.render('$marketActivity');
        }
@@ -285,7 +285,7 @@ ayral.prepare(function(){
           var business=Prepare('$marketActivity').getAttribute('business'),
               filter=Prepare('$marketActivity').getAttribute('filter'),
               tmpReq=dictionary.translate(req),
-              url=hostname+'/server/ui/app.market-activity.php?request='+req+'&treq='+tmpReq+'&id='+session;
+              url=hostname+'/server/ui/app.market-items-ui.php?request='+req+'&treq='+tmpReq+'&id='+session;
            
            
             if(filter!=1 && typeof filter != typeof undefined && filter!=null){
@@ -310,7 +310,7 @@ ayral.prepare(function(){
             var business=Prepare('$marketActivity').getAttribute('business'),
               filter=Prepare('$marketActivity').getAttribute('filter'),
               tmpReq=dictionary.translate(req),
-              url=hostname+'/server/ui/app.market-activity.php?request='+req+'&treq='+tmpReq+'&id='+session;
+              url=hostname+'/server/ui/app.market-items-ui.php?request='+req+'&treq='+tmpReq+'&id='+session;
            
            
             if(filter!=1 && typeof filter != typeof undefined && filter!=null){

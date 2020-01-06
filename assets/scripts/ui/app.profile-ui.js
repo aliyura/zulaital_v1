@@ -90,7 +90,7 @@ function otherProfile(otherID){
         }
        else{
          layer.render(loader);
-          var url=hostname+'/server/ui/app.profile-activity.php?request=2&id='+session+'&other='+otherID,
+          var url=hostname+'/server/ui/app.profile-ui.php?request=2&id='+session+'&other='+otherID,
               httpReq=new ayralHttpRequest('GET',url,'default',true);
                 httpReq.execute(function(response){
                 if(response!='progress'){

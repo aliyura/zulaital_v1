@@ -219,8 +219,8 @@ function siyayyaPrview(){
               businessStamp='<div class="orderStatusInPreview-wrp success">Sponsored</div>';
           }
           layer.clear();
-        
-         var temp= [item.sample.sample0,item.sample.sample1,item.sample.sample2,item.sample.sample3,item.sample.sample4,item.sample.sample5,item.sample.sample6,item.sample.sample7];
+
+          var temp=item.samples;
          for(sample in temp){
              sample=temp[sample];
              if(sample!='not_set' && sample!='' && sample!=null && typeof sample != typeof undefined){ 
@@ -324,7 +324,7 @@ function siyayyaPrview(){
              <div class="banner-section">
              <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
-                  <div class="item active previewFrame-layer" name="previewFrame-layer" style=" background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.72)),url(`+item.sample.sample0+`);"  onerror="onImageError(this);"  onclick="showImage('`+item.sample.sample0+`');">
+                  <div class="item active previewFrame-layer" name="previewFrame-layer" style=" background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.72)),url(`+item.sample+`);"  onerror="onImageError(this);"  onclick="showImage('`+item.sample.sample0+`');">
                   `+item_condition+` `+businessStamp+`
                   </div>
                 </div>
@@ -422,7 +422,7 @@ function previewActivity(itemid,itemName){
             new siyayyaPrview().displayItem(previewHistory,true,1);
         }
        else{
-        var url=hostname+'/server/ui/app.preview-activity.php?id='+session+'&itemid='+itemid+'&name='+itemName,
+        var url=hostname+'/server/ui/app.preview-ui.php?id='+session+'&itemid='+itemid+'&name='+itemName,
         httpReq=new ayralHttpRequest('GET',url,'default',true);        
         httpReq.execute(function(response){
             if(response!='progress'){
@@ -437,7 +437,9 @@ function previewActivity(itemid,itemName){
                         `);
                     }else{
                        result=result.toString().replace(/,(?=[^,]*$)/, '');
+                       result=result.toString().replace('success:', '');
                        var item=JSON.parse(result);
+                       print(item);
                        new siyayyaPrview().displayItem(item,true,1);
                     }
                  }

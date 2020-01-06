@@ -5,15 +5,21 @@ include('../date_generator.php');
 $app=new Application();
 
 if($con){
-$request=trim($app->real(($_GET['request'])));
-$subRequest=substr($request,0,strlen($request)-1);
+
+
+$request='none';
 $uid=$app->real($_GET['id']);
 $filter='ALL';
-$treq=$request;
 $location='Nigeria';
 $maxRows=20;
 $nextRows=0;
 $rowTemplate='';
+
+if(isset($_GET['request'])){
+    $request=trim($app->real(($_GET['request'])));
+}
+$treq=$request;
+$subRequest=substr($request,0,strlen($request)-1);
 
     if(isset($_GET['itemid'])){
         $itemid=$_GET['itemid'];
@@ -149,7 +155,7 @@ $rowTemplate='';
              "owner_id": "'.$item_owner_id.'",
              "owner_name": "'.$user_name.'",
              "owner_email": "'.$user_email.'",
-             "owner_mobile": "'.$user_mobile.'"
+             "owner_mobile": "'.$user_mobile.'",
              }
             ');
         } 

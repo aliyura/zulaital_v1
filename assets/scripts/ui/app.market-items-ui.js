@@ -208,7 +208,7 @@ function getMarketByFilter(filter){
                Prepare('$marketActivity').setAttribute('url',filter);
                
     
-       var url=hostname+'/server/ui/app.market-activity.php?request=1&id='+session+'&filter='+filter,
+       var url=hostname+'/server/ui/app.market-items-ui.php?request=1&id='+session+'&filter='+filter,
            business=Prepare('$marketActivity').getAttribute('business');
     
        if(business!=1 && typeof business != typeof undefined && business!=null){
@@ -222,7 +222,7 @@ function loadBusinessProducts(businessID, businessName){
                var layer=Prepare('$marketView'),
                    filter=Prepare('$marketActivity').getAttribute('filter');
              
-       var url=hostname+'/server/ui/app.market-activity.php?request=1&id='+session,
+       var url=hostname+'/server/ui/app.market-items-ui.php?request=1&id='+session,
            business=businessID;
     
        if(filter!=1 && typeof filter != typeof undefined && filter!=null){
@@ -241,7 +241,7 @@ function loadBusinessProducts(businessID, businessName){
 function loadGeneralProducts(param,option){
                var layer=Prepare('$marketView'),
                    filter=Prepare('$marketActivity').getAttribute('filter'),
-                   url=hostname+'/server/ui/app.market-activity.php?request=1&id='+session;
+                   url=hostname+'/server/ui/app.market-items-ui.php?request=1&id='+session;
                    
                    
     //initialize business url 

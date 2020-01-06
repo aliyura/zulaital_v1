@@ -178,7 +178,7 @@ function activateAccount(username){
             controller.setHtml('<img src="assets/images/loader.gif" class="btn-loader">');
             blockProgress();
             
-                var httpReq=new ayralHttpRequest('POST',hostname+'/server/app.sign-module.php?request=SIGNIN','default',true);
+                var httpReq=new ayralHttpRequest('POST',hostname+'/server/app.sign-module.php?request=LOGIN','default',true);
                 httpReq.execute(function(response){
                     if(response=='progress'){
                      controller.setHtml('<img src="assets/images/loader.gif" class="btn-loader">');

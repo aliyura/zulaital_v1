@@ -4,11 +4,13 @@ include('app.config.php');
 $app=new Application();
 
 if($con){
-$request=$app->upper(($_GET['request']));
-$uid=$app->real($_GET['id']);
+
+ $request=$app->upper(($_GET['request']));
+ $uid=$app->real($_GET['id']);
+
 if($request=='DELIVERY-FEE'){
       
-   $deliveryDetails=$app->find("{1}",'s_fees');
+   $deliveryDetails=$app->find("{1}",'km_fees');
     if($app->count($deliveryDetails)>0){
        while($row=$app->fetch($deliveryDetails)){
            
@@ -29,7 +31,7 @@ if($request=='DELIVERY-FEE'){
       $shippingFee=$app->real($_GET['fee']);
       $shippingArea=$app->real($_GET['area']);
          
-    $deliveryDetails=$app->find("{location_code='$shippingArea'}",'s_fees');
+    $deliveryDetails=$app->find("{location_code='$shippingArea'}",'km_fees');
     if($app->count($deliveryDetails)>0){
        if($row=$app->fetch($deliveryDetails)){
            

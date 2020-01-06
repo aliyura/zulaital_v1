@@ -240,7 +240,7 @@ function sayayyaCarts(){
 }
 function prepareCartActivity(target){
     var layer=app.find('$cartPanel'),
-        url=hostname+'/server/ui/app.cart-activity.php?request=1&id='+session;
+        url=hostname+'/server/ui/app.cart-ui.php?request=1&id='+session;
         mainTotalPayable=0;
 
     if(target=='1' || target==1){

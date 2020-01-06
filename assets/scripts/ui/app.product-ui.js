@@ -151,7 +151,7 @@ function refreshProducts(searchValue){
                 searchValue='1';
             }
         
-            var url=hostname+'/server/ui/app.product-activity.php?request='+searchValue+'&id='+session;
+            var url=hostname+'/server/ui/app.product-ui.php?request='+searchValue+'&id='+session;
             var httpReq=new ayralHttpRequest('GET',url,'default',true);
             httpReq.execute(function(response){
                 if(response!='progress'){

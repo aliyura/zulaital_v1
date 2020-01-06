@@ -10,9 +10,9 @@ var initialiBanners={
         "three":"We Offer Search Engine Integration To Our High Value Businesses, To Be Visible On Clients Global Search On Google And Social Media Platforms."
     },
     "banner":{
-        "one":"assets/ads/banner1.jpg",
-        "two":"assets/ads/banner2.jpg",
-        "three":"assets/ads/banner3.jpg"
+        "one":"/assets/ads/banner1.jpg",
+        "two":"/assets/ads/banner2.jpg",
+        "three":"/assets/ads/banner3.jpg"
     }           
 }
 function LogoLayerInit(){
@@ -75,10 +75,12 @@ function ExploreLayerInit(uri){
 }
 
 function AdvertManager(){
+
     this.createAdvert=function(item,type){
        var layer=Prepare('$slideBannerLayer'),
            path=hostname;
 
+            print(type);
       if(type==false){
           path='';  
       }
@@ -93,6 +95,7 @@ function AdvertManager(){
                template=`
                 <button type="button" onclick="loadGeneralProducts('OPEN');" style="text-transform:none"class="ripple"> <b><span class="" style="background-color:#333;padding:5px; border-radius:99px; padding-top:0; padding-bottom:0; color:#fff"> <i class="fa fa-check" style="font-size:12px;"></i></span></b> Shop Now</button>`;
           }
+
            layer.render(`
              <div class="item active">
              <img class="first-slide" src="`+path+item.banner.one+`" onerror="onBannerError(this);" alt="First slide">
@@ -203,7 +206,7 @@ angular.controller('main', function ($scope, $sce) {
                    <div class="actionbar-favicon">
                       <img src="assets/images/ico.png" class="faviconLogo-img">
                    </div>
-                   <span class="title">Klassy <b style="color:#2ecc71; font-weight:bold;">M</b>all</span>
+                   <span class="title">Zulai<b style="color:#2ecc71; font-weight:bold;">tal</b></span>
                  </div>
                 </app-name>
                </div>
@@ -224,7 +227,7 @@ angular.controller('main', function ($scope, $sce) {
                <div class="actionbar-favicon">
                   <img src="assets/images/ico.png" class="faviconLogo-img">
                </div>
-               <span class="title">Klassy <b style="color:#2ecc71; font-weight:bold;">M</b>all</span>
+               <span class="title">Zulai<b style="color:#2ecc71; font-weight:bold;">tal</b></span>
              </div>
             </app-name>
            </div>
@@ -278,8 +281,7 @@ angular.controller('main', function ($scope, $sce) {
                     <li actas="menu-item" target="$editProfileActivity">
                     <i class="icon-note"></i> Edit Profile</li> 
                     `+template+`
-                    <li actas="menu-item" target="$settingsActivity"><i class="fa fa-language"></i> Change Language</li>
-                   <li actas="menu-item" target="$complainActivity"><i class="icon-question"></i> Complain</li>
+                     <li actas="menu-item" target="$complainActivity"><i class="icon-question"></i> Complain</li>
                    <li actas="menu-item" target="logout();"><i class="icon-login"></i> Logout</li> 
              </ul>
           </div>
@@ -361,7 +363,7 @@ angular.controller('main', function ($scope, $sce) {
                   <div class="actionbar-favicon">
                      <img src="assets/images/ico.png" class="faviconLogo-img">
                   </div>
-                  <span class="title">Klassy <b style="color:#2ecc71; font-weight:bold">M</b>all</span>
+                  <span class="title">Zulai<b style="color:#2ecc71; font-weight:bold">tal</b></span>
                 </div>
                 </app-name>
                </div>
@@ -383,8 +385,7 @@ angular.controller('main', function ($scope, $sce) {
                        <li actas="menu-item" onclick="loadGeneralProducts('OPEN');">
                         <i class="icon-basket"></i> Market</li>
                         <li actas="menu-item" target="$aboutActivity"><i class="icon-info"></i> About Us</li>
-                        <li actas="menu-item" target="$contactActivity"><i class="icon-envelope"></i> Contact Us</li> 
-                        <li actas="menu-item" target="$settingsActivity"><i class="fa fa-language"></i> Change Language</li>
+                        <li actas="menu-item" target="$contactActivity"><i class="icon-envelope"></i> Contact Us</li>     
                         <li actas="menu-item" target="logout();"><i class="icon-login"></i> Login</li> 
                  </ul>
                 </div>
@@ -447,9 +448,11 @@ angular.controller('main', function ($scope, $sce) {
 
     //banner setup
     if(oldIBanners!=null && oldIBanners!='null' && oldIBanners!=''){
+        
         oldIBanners=app.parse(oldIBanners);
+
         if(oldIBanners!=false){
-          new AdvertManager().createAdvert(oldIBanners);
+          new AdvertManager().createAdvert(oldIBanners,true);
         }else{
           new AdvertManager().createAdvert(initialiBanners,false);
         }

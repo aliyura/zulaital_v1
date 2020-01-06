@@ -1,7 +1,7 @@
 var angular = angular.module('app',['ngSanitize']),
     initialLanguage=storage.getItem('language'),
     initialLocation=storage.getItem('location'),
-    hostname= 'https://www.klassymall.com/app/',
+    hostname= 'https://localhost/projects/klassymall.com/app',
     session=storage.getItem('session'), 
     launcher=storage.getItem('launch'),
     sessionExist=false,
@@ -62,8 +62,8 @@ if(!ayralWindow.location.href.match(/sign.html/)){
        Prepare('$app').setAttribute('state','active');
        Prepare('.launcher').hide();
     }else{ 
-       Prepare('$app').setAttribute('state','inactive');
-       Prepare('$launcher1View').show();
+       Prepare('$app').setAttribute('state','active');
+       //Prepare('$launcher1View').show();
     }  
     
     if(sessionExist){

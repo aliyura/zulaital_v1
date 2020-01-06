@@ -155,7 +155,7 @@ function sayayyaOrders(){
 
 function getNewOrders(){
     var layer=getLayer(),
-        url=hostname+'/server/ui/app.orders-activity.php?request=1&id='+session;
+        url=hostname+'/server/ui/app.orders-ui.php?request=1&id='+session;
 
     var  httpReq=new ayralHttpRequest('GET',url,'default',true);   
     httpReq.execute(function(response){
@@ -189,7 +189,7 @@ function getNewOrders(){
 }
 function ordersActivity(flag,open){
      var layer=getLayer(),
-         url=hostname+'/server/ui/app.orders-activity.php?request=1&id='+session+'&type='+flag;
+         url=hostname+'/server/ui/app.orders-ui.php?request=1&id='+session+'&type='+flag;
          layer.setAttribute('text-align','center');
          layer.render(loader);
     
