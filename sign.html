@@ -1,172 +1,409 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Zulaital Version1.0.0</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png" />
     <link type="text/css" rel="stylesheet" href="plugins/bootsrap/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="plugins/jalert/jAlert.css" />
     <link type="text/css" rel="stylesheet" href="plugins/ayral/ayral.css" />
     <link type="text/css" rel="stylesheet" href="plugins/icons/font-awesome.css" />
     <link type="text/css" rel="stylesheet" href="plugins/icons/simple-line-icons.css" />
-    <link type="text/css" rel="stylesheet" href="plugins/animation/animate.css" /> 
+    <link type="text/css" rel="stylesheet" href="plugins/animation/animate.css" />
     <link type="text/css" rel="stylesheet" href="plugins/labeauty/custom-tick.css" />
     <link type="text/css" rel="stylesheet" href="assets/styles/app.css" />
-     <link type="text/css" rel="stylesheet" href="assets/styles/device.css" />
+    <link type="text/css" rel="stylesheet" href="assets/styles/device.css" />
 </head>
+
 <body>
     <form action="" method="post">
         <ayral-app>
             <ayral-view>
-               <section class="app mainLayout" name="app">
-                <!--- ACTIVITIES MANAGER!-->
-                <section actas="activity" class="sign-container login-bg" name="signin">
-                    <div actas="sign-view" class="sign-view  login-view">
-                        <div actas="body">
-                            <input type="text" icon="user" autocomplete="off" name="username" maxlength="16" placeholder="Username or Mobile Number" class="abs-in">
-                            <input type="password" icon="key" autocomplete="off" name="password" maxlength="12" placeholder="Password" class="abs-in">
-                          
-                            <p target="$more-business-info"></p>
-                            <div actas="wrapper" class="check loginCheck-wrp">
-                              <input type="checkbox" data-labelauty="Keep me in"/>
-                            </div>
-                            <div class="alert alert-warning warnningAlert" transition="shake" role="alert">
-                                This is a warning alert—check it out!
-                            </div>
-                            <button type="button" shape="circle" class="success sigb-btn" name="login-trigger">Login</button>
-                        </div>
-                        <div actas="footer" class="footer links">
-                            <span actas="link" class="link" target="$signup">Register Now</span>
-                            <span actas="link" class="link" target="$recover">Forgot Password?</span>
-                        </div>
-                    </div>
-                </section>
-                <section actas="activity" class="sign-container signup-bg" name="signup" style="padding-top: 10%;">
-                    <div actas="sign-view" class="sign-view register-view">
-                        <div actas="body" class="account-panel" name="personalAccount">
-                            <input type="text" icon="user" placeholder="Name" name="p-name">
-                            <input type="tel" icon="phone" placeholder="Mobile Number" maxlength="11" name="p-number">
-                            <input type="email" icon="envelope" placeholder="Email Address" name="p-email">
-                            <div class="autocomplete">
-                             <input type="text"  class="capitalize city-input" autocomplete="off"  name="p-location" id="p-location" placeholder="Add your City" icon="location-pin">
-                            </div>
-                            <input type="password" autocomplete="off" icon="lock" placeholder="Password Min(6)" maxlength="12" name="p-password" class="abs-in">
-                            <input type="password" autocomplete="off" icon="lock" placeholder="Confirm Password" maxlength="12" name="p-confirm" class="abs-in">
-                            <div actas="wrapper" class="check signupCheck-wrp">
-                                 <input type="checkbox" name="p-terms"  data-labelauty="Accept Terms"/>
-                            </div>
-                            <div class="alert alert-warning warnningAlert signupAlert" transition="shake" role="alert">
-                                This is a warning alert—check it out!
-                            </div>
-                            <button type="button" shape="circle" class="success sigb-btn signup-trigger" objective="1">Continue</button>
-                        </div>
-                        <div actas="footer" class="footer links">
-                            <span actas="link" class="link" target="$signin">Already Have Account?</span>
-                            <span actas="link" class="link" target="$signin">Signin</span>
-                        </div>
-                    </div>
-                </section>
-                <section actas="activity" class="sign-container signup-bg" name="more-personal-info">
-                    <div actas="sign-view" class="sign-view">
-                        <div actas="container" style="padding:1em;padding-bottom: 5px;">
-                            <p>Fill below fields to complete your registration, so you can easily commence your business on Klassy Mall  app.</p>
-                        </div>
-                        <div actas="body">
-                            <p>Signing Username</p>
-                            <input type="text" name="p-new_username" class="abs-in" icon="user"  maxlength="30" placeholder="e.g Rabiu_Aliyu_009">
-                            <div class="autocomplete">
-                                <input type="text"  class="capitalize area-input" placeholder="Select your Area" autocomplete="off"  name="p-area" id="p-area" icon="location-pin">
-                            </div>
-                            <p>Select Gender </p>
-                            <select name="p-gender" icon="user-female">
-                                <option selected>Male</option>
-                                <option>Female</option>
-                            </select>
-                            <p>Date of Birth</p>
-                            <input type="date" name="p-dob"  min="1970-01-01" max="2019-02-01" icon="clock" placeholder="01/01/2099">
-                            <textarea wrap="" placeholder="Home/Office Address" name="p-address"></textarea>
-                            <div class="alert alert-warning warnningAlert " transition="shake" role="alert">
-                                This is a warning alert—check it out!
-                            </div>
-                            <button type="button" shape="circle" objective="1" class="success sigb-btn complete-signup-trigger">Register</button>
-                        </div>
-                    </div>
-                </section>
-                <section actas="activity" class="sign-container signup-bg" name="account_varification">
-                    <div actas="sign-view" class="sign-view" style="margin-top: 25%">
-                        <div actas="container" style="padding:1em;padding-bottom: 5px;">
-                            <p>We have sent activation PIN to provided cell phone number, please add it below to activate your account.</p>
-                        </div>
-                        <div actas="body">
-                            <p>
-                                <span>Signing Username</span>
-                                <span style="color:green;" name="pinResendStatus">
-                            </p>
-                            <input type="text" class="abs-in" name="v-username" icon="user" placeholder="e.g Rabiu_Aliyu_009">
+                <section class="app mainLayout" name="app">
+                    <!--- ACTIVITIES MANAGER!-->
+                    <section actas="activity" class="sign-container login-bg" name="signin">
+                        <div actas="sign-view" class="sign-view  login-view">
+                            <section actas="action-bar-top" class="default action-bar-top"
+                                ng-bind-html="actionBarLayer">
+                                <!--   *** END OF ACTION BAR****   !-->
+                                <div class="container-fluid toolbar-content">
+                                    <div class="row">
+                                        <div class="col-md-4 toolbar-icon">
+                                            <span actas="option" target="#myDrawer">
+                                                <i class="icon-menu" style="color: #00BCD4;"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-8 toolbar-text text-center">LOGIN</div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--   *** END OF ACTION BAR****   !-->
 
-                            <p>Activation PIN</p>
-                            <input type="text" autocomplete="off" name="v-code" icon="lock" placeholder="e.g 001122" maxlength="6">
-                            <div class="alert alert-warning warnningAlert" transition="shake" role="alert">
-                                This is a warning alert—check it out!
-                            </div>
-                            <button type="button" shape="circle" name="varify-account-trigger" class="success sigb-btn">Varify</button>
+                            <div actas="body">
+                                <!-- <input type="text" icon="user" autocomplete="off" name="username" maxlength="16" placeholder="Username or Mobile Number" class="abs-in">
+                            <input type="password" icon="key" autocomplete="off" name="password" maxlength="12" placeholder="Password" class="abs-in"> -->
 
+                                <div class="app-logo">
+                                    <div class="logo">
+
+                                    </div>
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-user" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="text" autocomplete="off" name="username" maxlength="16"
+                                            placeholder="Username or Mobile Number" class="abs-in">
+                                    </div>
+
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-lock" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="password" autocomplete="off" name="password" maxlength="12"
+                                            placeholder="Password" class="abs-in">
+                                    </div>
+
+                                </div>
+                                <p target="$more-business-info"></p>
+                                <div actas="wrapper" class="check loginCheck-wrp">
+                                    <input type="checkbox" data-labelauty="Keep me in" />
+                                </div>
+                                <div class="alert alert-warning warnningAlert" transition="shake" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <button type="button" class="success sigb-btn" name="login-trigger">Login</button>
+                            </div>
                             <div actas="footer" class="footer links">
-                                <span actas="link" class="link" name="resendActivation-trigger" onclick="resendActivationPIN(this);">Resend PIN</span>
-                                <span actas="link" class="link" target="$signin">Skip</span>
+                                <span actas="link" class="link" target="$signup">Don't have an Account? <span
+                                        style="color: #00BCD4;">
+                                        Sign Up
+                                    </span>
+                                </span>
+                                <span actas="link" class="link" target="$recover">Forgot Password?</span>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section actas="activity" class="sign-container signup-bg" name="recover">
-                    <div actas="sign-view" class="sign-view" style="margin-top: 40%">
+                    </section>
 
-                        <div actas="container" style="padding:1em;padding-bottom: 0">
-                            <p>Enter your username and phone number below to reset your password</p>
-                        </div>
-                        <div actas="body">
-                            <input type="text" name="r-username" icon="user" placeholder="Username" class="abs-in">
-                            <input type="tel" name="r-mobile" icon="phone" placeholder="0X000000000" maxlength="11">
-                            <div class="alert alert-warning warnningAlert" transition="shake" role="alert">
-                                This is a warning alert—check it out!
-                            </div>
-                            <button type="button" shape="circle" class="success sigb-btn" name="recover-password-trigger">Continue</button>
-                        </div>
-                        <div actas="footer" class="footer links">
-                            <span actas="link" class="link" target="$signin">Remember Password?</span>
-                            <span actas="link" class="link" target="$signin">Login Here</span>
-                        </div>
-                    </div>
-                  </section>
-                  <section actas="activity" class="sign-container signup-bg" name="reset">
-                    <div actas="sign-view" class="sign-view" style="margin-top: 40%">
+                    <section actas="activity" class="sign-container signup-bg" name="signup" style="padding-top: 10%;">
+                        <div actas="sign-view" class="sign-view register-view">
+                            <section actas="action-bar-top" class="default action-bar-top"
+                                ng-bind-html="actionBarLayer">
+                                <!--   *** END OF ACTION BAR****   !-->
+                                <div class="container-fluid toolbar-content">
+                                    <div class="row">
+                                        <div class="col-md-4 toolbar-icon">
+                                            <span actas="link" class="link" target="$signin">
+                                                <i class="icon-arrow-left-circle"
+                                                    style="font-size: 21px; color: #00BCD4;"></i>
+                                            </span>
 
-                        <div actas="container" style="padding:1em;padding-bottom: 0">
-                            <p>Password reset, we just sent a reset key to your mobile number via SMS. Kindly use it below to reset your password.</p>
-                        </div>
-                        <div actas="body">
-                            <input type="text" name="r-key" maxlength="6" icon="key" placeholder="Reset Key" class="abs-in">
-                            <input type="password" name="r-new-password" icon="lock"  placeholder="New Password" maxlength="12">  
-                            <input type="password" name="r-new-cpassword" icon="lock" placeholder="Confirm Password" maxlength="12">
-                            <div class="alert alert-warning warnningAlert" transition="shake" role="alert">
-                                This is a warning alert—check it out!
+                                        </div>
+                                        <div class="col-md-8 toolbar-text text-center">SIGN UP</div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--   *** END OF ACTION BAR****   !-->
+                            <div actas="body" class="account-panel" name="personalAccount">
+                                <div class="app-logo">
+                                    <div class="logo">
+
+                                    </div>
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-user" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="text" placeholder="Name" name="p-name">
+                                    </div>
+
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-phone" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="tel" placeholder="Mobile Number" maxlength="11" name="p-number">
+                                    </div>
+
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-envelope" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input ttype="email" placeholder="Email Address" name="p-email">
+                                    </div>
+
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-location-pin" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="text" class="capitalize city-input" autocomplete="off"
+                                            name="p-location" id="p-location" placeholder="Add your City">
+                                    </div>
+
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-lock" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="password" autocomplete="off" placeholder="Password Min(6)"
+                                            maxlength="12" name="p-password" class="abs-in">
+                                    </div>
+
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-lock" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="password" autocomplete="off" placeholder="Confirm Password"
+                                            maxlength="12" name="p-confirm" class="abs-in">
+                                    </div>
+
+                                </div>
+                                <div actas="wrapper" class="check signupCheck-wrp">
+                                    <input type="checkbox" name="p-terms" data-labelauty="Accept Terms" />
+                                </div>
+                                <div class="alert alert-warning warnningAlert signupAlert" transition="shake"
+                                    role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <button type="button" class="success sigb-btn signup-trigger"
+                                    objective="1">Continue</button>
                             </div>
-                            <button type="button" shape="circle" class="success sigb-btn" name="reset-password-trigger">Reset</button>
+                            <div actas="footer" class="footer links">
+                                <span actas="link" class="link" target="$signin">Already have an account? <span
+                                        style="color: #00BCD4;text-transform: capitalize;">Signin</span></span>
+
+                            </div>
                         </div>
-                        <div actas="footer" class="footer links">
-                            <span actas="link" class="link" onclick="resendResetKey(this);">Resend</span>
-                            <span actas="link" class="link" target="$signin">Remember Password?</span>
+                    </section>
+                    <section actas="activity" class="sign-container" name="more-personal-info">
+                        <div actas="sign-view" class="sign-view">
+                            <div actas="container" style="padding:1em;padding-bottom: 5px;">
+                                <p>Fill below fields to complete your registration, so you can easily commence your
+                                    business on Klassy Mall app.</p>
+                            </div>
+                            <div actas="body">
+                                <div class="app-logo">
+                                    <div class="logo">
+
+                                    </div>
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-user" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="text" autocomplete="off" name="username" maxlength="16"
+                                            placeholder="Username or Mobile Number" class="abs-in">
+                                    </div>
+
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-lock" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="password" autocomplete="off" name="password" maxlength="12"
+                                            placeholder="Password" class="abs-in">
+                                    </div>
+
+                                </div>
+                                <p>Signing Username</p>
+                                <input type="text" name="p-new_username" class="abs-in" icon="user" maxlength="30"
+                                    placeholder="e.g Rabiu_Aliyu_009">
+                                <div class="autocomplete">
+                                    <input type="text" class="capitalize area-input" placeholder="Select your Area"
+                                        autocomplete="off" name="p-area" id="p-area" icon="location-pin">
+                                </div>
+                                <p>Select Gender </p>
+                                <select name="p-gender" icon="user-female">
+                                    <option selected>Male</option>
+                                    <option>Female</option>
+                                </select>
+                                <p>Date of Birth</p>
+                                <input type="date" name="p-dob" min="1970-01-01" max="2019-02-01" icon="clock"
+                                    placeholder="01/01/2099">
+                                <textarea wrap="" placeholder="Home/Office Address" name="p-address"></textarea>
+                                <div class="alert alert-warning warnningAlert " transition="shake" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <button type="button" shape="circle" objective="1"
+                                    class="success sigb-btn complete-signup-trigger">Register</button>
+                            </div>
                         </div>
-                    </div>
-                  </section>
+                    </section>
+                    <section actas="activity" class="sign-container signup-bg" name="account_varification">
+                        <div actas="sign-view" class="sign-view" style="margin-top: 25%">
+                            <div actas="container" style="padding:1em;padding-bottom: 5px;">
+                                <p>We have sent activation PIN to provided cell phone number, please add it below to
+                                    activate your account.</p>
+                            </div>
+                            <div actas="body">
+                                <p>
+                                    <span>Signing Username</span>
+                                    <span style="color:green;" name="pinResendStatus">
+                                </p>
+                                <input type="text" class="abs-in" name="v-username" icon="user"
+                                    placeholder="e.g Rabiu_Aliyu_009">
+
+                                <p>Activation PIN</p>
+                                <input type="text" autocomplete="off" name="v-code" icon="lock" placeholder="e.g 001122"
+                                    maxlength="6">
+                                <div class="alert alert-warning warnningAlert" transition="shake" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <button type="button" shape="circle" name="varify-account-trigger"
+                                    class="success sigb-btn">Verify</button>
+
+                                <div actas="footer" class="footer links">
+                                    <span actas="link" class="link" name="resendActivation-trigger"
+                                        onclick="resendActivationPIN(this);">Resend PIN</span>
+                                    <span actas="link" class="link" target="$signin">Skip</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section actas="activity" class="sign-container signup-bg" name="recover">
+                        <div actas="sign-view" class="sign-view" style="margin-top: 29%">
+                            <section actas="action-bar-top" class="default action-bar-top"
+                                ng-bind-html="actionBarLayer">
+                                <!--   *** END OF ACTION BAR****   !-->
+                                <div class="container-fluid toolbar-content">
+                                    <div class="row">
+                                        <div class="col-md-4 toolbar-icon">
+                                            <span actas="link" target="$signin">
+                                                <i class="icon-arrow-left-circle" style="font-size:20px;color: #00BCD4;"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-8 toolbar-text text-center">FORGOT PASSWORD</div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--   *** END OF ACTION BAR****   !-->
+                            <div actas="body" style="margin-top:15%!important">
+                                <div class="app-logo">
+                                    <div class="logo">
+                                
+                                    </div>
+                                </div>
+                                <div actas="container" style="padding:1em;padding-bottom: 0">
+                                    <p  style="color: #d3d3d3;">Enter your username and phone number below to reset your password</p>
+                                </div>
+                                
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-user" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="text" name="r-username" placeholder="Username" class="abs-in">
+                                    </div>
+
+                                </div>
+                                <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            <i class="icon icon-phone" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                        <input type="tel" name="r-mobile" placeholder="0X000000000" maxlength="11">
+                                    </div>
+
+                                </div>
+                                <div class="alert alert-warning warnningAlert" transition="shake" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <button type="button" class="success sigb-btn"
+                                    name="recover-password-trigger">Continue</button>
+                            </div>
+                            <div actas="footer" class="footer links">
+                                <span actas="link" class="link" target="$signin">Remember Password?</span>
+                                <span actas="link" class="link" target="$signin">Login Here</span>
+                            </div>
+                        </div>
+                    </section>
+                    <section actas="activity" class="sign-container signup-bg" name="reset">
+                        <div actas="sign-view" class="sign-view" style="margin-top: 40%">
+
+                            <div actas="container" style="padding:1em;padding-bottom: 0">
+                                <p>Password reset, we just sent a reset key to your mobile number via SMS. Kindly use it
+                                    below to reset your password.</p>
+                            </div>
+                            <div actas="body">
+                                <input type="text" name="r-key" maxlength="6" icon="key" placeholder="Reset Key"
+                                    class="abs-in">
+                                <input type="password" name="r-new-password" icon="lock" placeholder="New Password"
+                                    maxlength="12">
+                                <input type="password" name="r-new-cpassword" icon="lock" placeholder="Confirm Password"
+                                    maxlength="12">
+                                <div class="alert alert-warning warnningAlert" transition="shake" role="alert">
+                                    This is a warning alert—check it out!
+                                </div>
+                                <button type="button" shape="circle" class="success sigb-btn"
+                                    name="reset-password-trigger">Reset</button>
+                            </div>
+                            <div actas="footer" class="footer links">
+                                <span actas="link" class="link" onclick="resendResetKey(this);">Resend</span>
+                                <span actas="link" class="link" target="$signin">Remember Password?</span>
+                            </div>
+                        </div>
+                    </section>
                 </section>
             </ayral-view>
         </ayral-app>
     </form>
 </body>
+
 </html>
 <script type="text/javascript" src="plugins/angular/angular.js"></script>
 <script type="text/javascript" src="plugins/angular//angular-route.js"></script>

@@ -23,7 +23,7 @@ function searchItem(url,req){
                           if(businessName!='*'){
                               layer.render(`
                                 <div actas="wrapper"  class="result-counter-view">
-                                    <h4 name="searchResultCounter">Latest Items <i actas="badge" class="danger">0 Found</i></h4>
+                                    <h4 name="searchResultCounter">New Arrivals</h4>
                                 </div>
                                 <div  class="RetryActivity-trigger">
                                   <img src="assets/images/error.png" class="activityViewError"/> 
@@ -33,7 +33,7 @@ function searchItem(url,req){
                           }else{
                             layer.render(`
                                 <div actas="wrapper"  class="result-counter-view">
-                                    <h4 name="searchResultCounter">Latest Items <i actas="badge" class="danger">0 Found</i></h4>
+                                    <h4 name="searchResultCounter">New Arrivals</h4>
                                 </div>
                                 <div  class="RetryActivity-trigger">
                                   <img src="assets/images/error.png" class="activityViewError"/> 
@@ -55,7 +55,7 @@ function searchItem(url,req){
                           }else{
                             layer.render(`
                                 <div actas="wrapper"  class="result-counter-view">
-                                    <h4 name="searchResultCounter">Latest Items <i actas="badge" class="danger">0 Found</i></h4>
+                                    <h4 name="searchResultCounter">New Arrivals</h4>
                                 </div>
                                 <div  class="RetryActivity-trigger">
                                   <img src="assets/images/error.png" class="activityViewError"/> 

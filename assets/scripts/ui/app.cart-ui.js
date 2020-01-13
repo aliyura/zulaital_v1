@@ -141,17 +141,19 @@ function sayayyaCarts(){
           
          if(item.selected_size!='Any' && item.selected_size!=''){
             sizes=`
-            <div class="total selectedSizeColor-wrp" style="width:`+selected+`">
+            <div class="total selectedSizeColor-wrp" style="width:`+selected+`; margin-top:0;">
                 <strong>Size</strong>
-                <p style="background-color:#ccc; padding:3px; font-size:5px">`+item.selected_size+`</p>
+                
+                <button type="button" class="sizesColors-btn sizes-btn"  style="background-color:#ccc;font-size: 14px; padding:3px;border-radius: 50%;min-width: 25px;min-height: 25px;" name="any-size" >`+item.selected_size+`</button>
             </div>
             `;
          }      
          if(item.selected_color!='Any' && item.selected_color!=''){
             colors=`
-            <div class="total selectedSizeColor-wrp" style="width:`+selected+`">
+            <div class="total selectedSizeColor-wrp" style="width:`+selected+`;margin-top:0;">
                 <strong>Color</strong>
-                <p style="background-color:`+item.selected_color+`; padding:3px; font-size:5px">`+item.selected_color+`</p>
+                <button type="button" class="sizesColors-btn sizes-btn"  style="background-color:`+item.selected_color+`;font-size: 14px; padding:3px;border-radius: 50%;width: 25px;height: 25px;" name="any-size" >`+item.selected_size+`</button>
+            
             </div>
             `;
          }
@@ -160,30 +162,47 @@ function sayayyaCarts(){
           layer.append(`
              <div  actas="widget" class="layout-inline row widget" name="item_`+item.id+`">
               <div class="col col-pro layout-inline">
-                <img src="`+item.sample+`" onerror="onImageError(this);" style="border:1px solid #fdfdfd" class="cart-item-img" alt="`+item.name+`" />
-                <p>`+item.name+`</p>
+                <img src="`+item.sample+`" onerror="onImageError(this);" style="border:1px solid #fdfdfd;border-radius: 10px;" class="cart-item-img" alt="`+item.name+`" />
+                
               </div>
-              <div class="col col-price col-numeric align-left ">
-                <p name="price_`+item.id+`">`+item.price+`</p>
-                  <div class="total" style="display:block;">
+              <div class="col" style="width:63%; margin-top: -24px;">
+              <p>`+item.name+`</p>          
+                  <div class="total">                    
+                    <p style="font-size:14px;">
                     <strong>Total</strong>
-                    <p style="font-size:8px;">
-                    <span><i class="fa fa-naira"></i><b class="totalPayable" name="total_`+item.id+`">`+item.total+`</b></span>
+                    <span><i class="fa fa-naira"></i><b class="totalPayable" name="total_`+item.id+`">`+app.toMoney(parseInt(item.total))+`</b></span>
                     </p>
                   </div>
-                    `+sizes+` `+colors+`
+                  <div class="row"> `+sizes+` `+colors+` </div>
+                  <div class="row">
+                  <div class="increment-wrapper">    
+                  <div class="col-sm-4 increment-item">
+                  <button type="button" class="" onclick="cartContityManager(this,'`+item.id+`');">-</button>
+                  </div>               
+                  <div class="col-sm-4 increment-item">
+                  <input type="numeric" class="" name="contity_`+item.id+`" value="`+item.contity+`" />
+                  </div>           
+                    <div class="col-sm-4 increment-item">
+                  <button type="button" class="" onclick="cartContityManager(this,'`+item.id+`');">+</button>
+                  </div>        
+                  </div>
+                    <div class="increment-wrapper-2">    
+                  <div class="col-sm-12 increment-item">
+                   <span class="fa fa-trash deleteCart-item danger" onclick="deleteCartItem(this,'`+item.id+`');" ></span>
+                  </div>           
+                    
+                  </div>
+                  </div>
               </div>
-              <div class="col col-qty layout-inline">
-                <span class="fa fa-trash deleteCart-item danger" onclick="deleteCartItem(this,'`+item.id+`');" ></span>
-                <button type="button" class="qty qty-minus" onclick="cartContityManager(this,'`+item.id+`');">-</button>
-                <input type="numeric" name="contity_`+item.id+`" value="`+item.contity+`" />
-                <button type="button" class="qty qty-plus" onclick="cartContityManager(this,'`+item.id+`');">+</button>
-              </div>
+             
              
             </div>
           `);
             
-          mainTotalPayable+=Number(item.total.toString().replace(/,/g,''));        
+          mainTotalPayable+=Number(item.total.toString().replace(/,/g,''));  
+          
+           var layer=app.find('$totalcost');     
+           layer.innerHTML = "";
           if(itemCounter==items.length-1){
     
             var absoulutePayable=mainTotalPayable;
@@ -192,45 +211,39 @@ function sayayyaCarts(){
             shippingFee=app.toMoney(shippingFee);
               
              layer.append(`
-               <div class="tf">
-                 <div class="row layout-inline">
-                    <div class="col">
-                     <p>0.00</p>
+               <div class="tf" style="padding:1em">
+                 <div class="row">                                
                    </div>
-                   <div class="col">
-                     <p>VAT</p>
-                   </div>
-                   <div class="col"></div>
-                 </div>
-                 <div class="row layout-inline">
-                   <div class="col">
-                     <p name="shippingFee" fee="`+shippingFee+`">`+shippingFee+`</p>
-                   </div>
-                   <div class="col">
-                     <p>Shipping</p>
-                   </div>
-                   <div class="col"></div>
-                 </div>
-                  <div class="row layout-inline">
-                   <div class="col">
-                     <p style="font-weight:bold; font-size:20px;">
-                        <i class="fa fa-naira"></i>
-                        <b name="total_PayableAmount" payable="`+absoulutePayable+`">`+mainTotalPayable+`</b>
+                       <div class="col-sm-4 cost">
+                    
+                      <p style="font-weight:bold;font-size:16px;color: #545454;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                        Cost: <i class="fa fa-naira"></i>
+                        <b name="total_PayableAmount" payable="`+absoulutePayable+`">`+app.toMoney(absoulutePayable)+`</b>
                     </p>
                    </div>
-                   <div class="col">
-                     <p>Total</p>
+                     <div class="col-sm-4 cost">
+                    
+                      <p style="font-weight:bold;font-size:16px;color: #545454;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                        Shipping fee: <i class="fa fa-naira"></i>
+                        <b name="total_PayableAmount" fee="`+shippingFee+`">`+shippingFee+`</b>
+                    </p>
                    </div>
-                   <div class="col"></div>
-                 </div> 
-                <div class="row layout-inline">
-                   <div class="col">
-                       <p name="shippingArea-desc">`+shippingArea+`</p>
-                       <select class="deliveryLocations cartDeliveryLocations" name="deliveryLocations"  onchange="deliveryLocationSelected(this);" style="font-size:12px;"></select>
-                   </div>
-                   <div class="col"></div>
-                 </div>
-                     <button type="button" class="toCheckout-btn success" onclick="orderActivity(this);" style="float:right; outline:none; margin-top: 1em;"> Proceed to Checkout &nbsp; <i class="icon-arrow-right" style="font-size:14px"></i></button>
+                     <div class="col-sm-4 cost">
+                    
+                      <p style="font-weight:bold;font-size:16px;color: #545454;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                        Total Price: <i class="fa fa-naira"></i>
+                        <b name="total_PayableAmount" style="color:#00BCD4!important" payable="`+mainTotalPayable+`">`+mainTotalPayable+`</b>
+                    </p>
+                   </div>                   
+                 </div>            
+                   <div class="row checkout-btn-row">
+                      <div class="col-sm-6 checkout-btn back-btn">
+                       <button type="button" class="toCheckout-btn" onclick="orderActivity(this);" style="float:right; outline:none;"><span><i class="fa fa-arrow-left" style="font-size:14px"></i></span>&nbsp; Back</button>
+                      </div>
+                       <div class="col-sm-6 checkout-btn checkout-button" >
+                       <button type="button" class="toCheckout-btn" onclick="orderActivity(this);" style="float:right; outline:none;">Checkout &nbsp; <i class="icon-arrow-right" style="font-size:14px"></i></button>
+                      </div>
+                   </div> 
                </div> 
                 `);
           }

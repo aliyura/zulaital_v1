@@ -196,7 +196,7 @@ if(sessionExist){
   }
 }
 function siyayyaPrview(){
-    
+  
    this.displayItem=function(item,save,type){
       
         var item_condition='',businessStamp='',warranty='',
@@ -223,14 +223,16 @@ function siyayyaPrview(){
           var temp=item.samples;
          for(sample in temp){
              sample=temp[sample];
+             sub_items +=`<div class="indicators row"><ol class="">`;
              if(sample!='not_set' && sample!='' && sample!=null && typeof sample != typeof undefined){ 
-              sub_items=sub_items+`
-                <div class="item active">
-                  <img class="first-slide animated" onerror="onImageError(this);" onclick="loadToViewer(this);" src="`+sample+`" alt="`+item.name+`">
-                </div>`;
+              sub_items=sub_items+`                  
+                    <li  class="preview-indicator active"></li>                 
+                `;
              }
          }  
               
+         sub_items += `</ol></div>`
+
         if(item.contity=='MULTIPLE'){
           multiple=`
            <!-- addition button -->
@@ -248,19 +250,20 @@ function siyayyaPrview(){
        if(item_colors.length>0 && item.colors!=""){
            for(color in item_colors){
               colors+=`
-                <button type="button" class="sizesColors-btn colors-btn" name="any-color" onclick="colorSelection(this);" style="background-color:`+ item_colors[color]+`">`+item_colors[color]+`</button>
+                <button type="button" class="sizesColors-btn colors-btn" name="any-color" onclick="colorSelection(this);" style="background-color:`+ item_colors[color]+`"></button>
               `;
            }
-           colorsContainer=`
-            <div actas="container" class="sizesColors-wrapper">
-                <p>Available Colors</p>
-                `+colors+`
-            </div>
-            `;
+          //  colorsContainer=`
+          //   <div actas="container" class="sizesColors-wrapper">
+          //       <p>Available Colors</p>
+          //       `+colors+`
+          //   </div>
+          //   `;
        }
        var item_sizes=item.sizes.split(',');
-       if(item_sizes.length>0 && item.sizes!=""){
+       if(item_sizes.length>0 && item.sizes!="" && item_sizes !=null){
            for(size in item_sizes){
+             
               sizes+=`
                 <button type="button" class="sizesColors-btn sizes-btn"  name="any-size"  onclick="sizeSelection(this);" >`+item_sizes[size]+`</button>
               `;
@@ -268,7 +271,6 @@ function siyayyaPrview(){
            
            sizesContainer=`
             <div actas="container"  class="sizesColors-wrapper">
-                <p>Available Sizes</p>
                 `+sizes+`
             </div>
           `;
@@ -290,18 +292,26 @@ function siyayyaPrview(){
        if(item.owner_id!==session){
            previewControlsHTML=`
              `+colorsContainer+` `+sizesContainer+`
-             <p class="icons" style="padding:1em;">
+            
+             <div class="row fixed checkout-btn-row">
+                      <div class="col-sm-6 checkout-btn back-btn">
+                       <button type="button" class="toCheckout-btn" onclick="orderActivity(this);" style="float:right; outline:none;"><span><i class="fa fa-arrow-left" style="font-size:14px"></i></span>&nbsp; Back</button>
+                      </div>
+                       <div class="col-sm-6 checkout-btn checkout-button" >
+                        
                 `+multiple+`           
                  <!-- buy/add button -->
-                <span><button type="button" class="btn waves-effect waves-light cartbtn  waves-ripple success " style="float:right; outline:none; " onclick="addToCart(this,'`+item.id+`','`+item.name+`');" name="buy_`+item.id+`" contity="1"><i class="icon-basket"></i>&nbsp;Add to Cart</button></span> 
-            </p>
+                <button type="button" class="btn waves-effect waves-light cartbtn  waves-ripple success " style="float:right;height:100%;width:100%;outline:none; " onclick="addToCart(this,'`+item.id+`','`+item.name+`');" name="buy_`+item.id+`" contity="1"><i class="icon-basket"></i>&nbsp;Add to Cart</button>
+            
+                      </div>
+                   </div> 
            
             `;
-             publishedByHTML=`Published by <b>`+item.owner_name+`</b> at `+item.location+`, about `+item.date+``;
+             publishedByHTML=``;
        }else{
              previewControlsHTML=`
              `;
-             publishedByHTML=`Published by <b>you</b> at `+item.location+`, about `+item.date+``;
+             publishedByHTML=``;
        }
        
        
@@ -336,7 +346,7 @@ function siyayyaPrview(){
             </div>
           <div class="row">
             <!-- product description -->
-            <div class="col-xs-12" style="padding:0; background:#fff">
+            <div class="col-xs-12" style="padding:0; background:none">
               <p class="productname">`+item.name+` `+target+` `+warranty+`</p>
                <!-- product prices -->
               <hr class="divider">
@@ -348,17 +358,16 @@ function siyayyaPrview(){
               <!-- product icons for substraction and additkon -->
               <section class="icons-wrp">
                 `+previewControlsHTML+`
-                  <div class="row">
-                    <section actas="container" style="margin-bottom:2em;" > 
-                        <div actas="header">`+publishedByHTML+`</div>
-                    </section>
-                  </div>
+              
                 <!-- specification and review -->
                 <div class="row">
-                  <div actas="header" class="signup-option">
+                  <div actas="header" class="signup-option" style="padding:2px 10px;">
                     <div actas="group-view" class="group-view specs previewTabsTriggers">
                       <li class="product-tabs active"  name="description" onclick="preparePreviewTabs(this);">
                         Description
+                      </li>
+                       <li class="product-tabs" name="features" onclick="preparePreviewTabs(this);">
+                        Features
                       </li>
                       <li class="product-tabs" name="review" onclick="preparePreviewTabs(this);">
                         Review
@@ -370,34 +379,18 @@ function siyayyaPrview(){
                      <section actas="container" class="description animated slideInLeft" name="prev-descriptionLayer"> 
                        <p>`+item.description+`<p>
                     </section>
+                      <section actas="container" class="description animated slideInLeft" name="prev-featuresLayer"> 
+                        <p>
+                        <li>No Features shared</li>
+                        <li>No Features shared</li>
+                        <li>No Features shared</li>
+                        <li>No Features shared</li>
+                        </p>
+                    </section>
                     <section actas="container" class="description animated slideInLeft" name="prev-reviewLayer"> 
                         <p>No Review</p>
                     </section>
-                    </div>
-                     <div class="row">
-                         <section actas="container" class="location-view"  state="1" target="$mapActivity">
-                          <iframe class="map" src="https://www.google.com/maps/embed? pb=!1m10!1m8!1m3!1d15856.471218200293!2d3.6167148!3d6.50676905!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1547966632964" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                         </section>
-                        </div>
-                        <div class="row">
-                        <div actas="container" class="comment-container">
-                             <div actas="header" class="upload-header">
-                                 <div actas="wrapper" class="upload-icon-desc">
-                                   <h2 style="text-align:center; font-weight:bold">Send Message</h2>
-                                </div>
-                             </div>
-                            <div actas="body" class="comment-body">
-                                <input type="text" name="preview-mName" icon="user" placeholder="Name" > 
-                                <input type="text" name="preview-mSubject"  icon="wallet" placeholder="Subject">
-                                <textarea name="preview-mBody"  class="description" wrap="hard" placeholder="Type Message"></textarea>
-                                 <div class="alert alert-warning warnningAlert " transition="shake" role="alert">
-                                    This is a warning alert—check it out!
-                                </div>
-                                 <div class="alert alert-success successAlert " transition="shake" role="alert">
-                                      This is a warning alert—check it out!
-                                </div>
-                                <button type="button" shape="circle" class="ripple danger post-btn" style="padding-left:10px;padding-right:10px; float:right" onclick="sendMessage(this);" receiver="`+item.owner_id+`" item="`+item.id+`" to="`+item.owner_email+`">Send</button>
-                            </div>
+                    </div>                                                  
                          </div>
                         </div>
                       </section>

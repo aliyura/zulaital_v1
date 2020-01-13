@@ -1,13 +1,13 @@
 var initialiBanners={
     "header":{
-        "one":"Advertise Product",
-        "two":"Buy & Sale Online",
-        "three":"Google Integration"
+        "one":"Collection",
+        "two":"Explore",
+        "three":"Flash Sales"
     },
     "body":{
-        "one":"You Have A Target, And We Will Help You Reach Them. We Can Deliver You A High Volume Of Sales At Zero Costs Completly Free",
-        "two":"Stay On Top Of Everything, Even When You are Away. With Klassy Mall App Everything Is Posible, Buy And Sale Your Products With Your Smartphone",
-        "three":"We Offer Search Engine Integration To Our High Value Businesses, To Be Visible On Clients Global Search On Google And Social Media Platforms."
+        "one":"The amazing collection for your kids",
+        "two":"Kids collection for your kind",
+        "three":"One place to get all you need"
     },
     "banner":{
         "one":"/assets/ads/banner1.jpg",
@@ -23,7 +23,7 @@ function LogoLayerInit(){
        <div class="actionbar-favicon">
           <img src="assets/images/ico.png" class="faviconLogo-img">
        </div>
-       <span class="title">Klassy <b style="color:#2ecc71; font-weight:bold">M</b>all</span>
+       <span class="title">Zulaital</span>
      </div>
     </app-name>
    `);
@@ -66,7 +66,7 @@ function ExploreLayerInit(uri){
     <div class="explore-btn" target="redirectBack(this);">
      
       <div class="actionbar-backbtn">
-         <i class="fa fa-angle-left"></i>
+         <i class="icon-arrow-left"></i>
       </div>
       <span class="title">`+title+`</span>
     </div>
@@ -112,6 +112,9 @@ function AdvertManager(){
                     <div class="carousel-caption">
                         <h1>`+item.header.two+`</h1>
                         <p>`+item.body.two+`</p>
+                        <button type="button" name="marketSearch-trigger">
+                        ${item.body.two}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -125,11 +128,16 @@ function AdvertManager(){
                 </div>
             </div>
            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-           <span class="glyphicon fa fa-chevron-left" aria-hidden="true"></span>
+              <span>
+               <i class="icon-arrow-left" aria-hidden="true"></i>
+               </span>
+               
            <span class="sr-only">Previous</span>
            </a>
            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-               <span class="glyphicon fa fa-chevron-right" aria-hidden="true"></span>
+               <span>
+               <i class="icon-arrow-right" aria-hidden="true"></i>
+               </span>
                <span class="sr-only">Next</span>
            </a>
              <div actas="layout" class="login-sigup-layout" style="text-align:center; padding-left:5%;color:#d9534f;">
@@ -146,43 +154,47 @@ function AdvertManager(){
              <div class="item active">
              <img class="first-slide" src="`+path+item.banner.one+`" onerror="onBannerError(this);" alt="First slide">
              <div class="container">
-                 <div class="carousel-caption">
-                      <h1>`+item.header.one+`</h1>
+                 <div class="carousel-caption carosel">
                         <p>`+item.body.one+`</p>
+                        <button type="button" class="carousel-button">${item.header.one}</button>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <img class="second-slide" src="`+path+item.banner.two+`" onerror="onBannerError(this);"  alt="Second slide">
                 <div class="container">
-                    <div class="carousel-caption">
-                        <h1>`+item.header.two+`</h1>
-                        <p>`+item.body.two+`</p>
+                    <div class="carousel-caption carosel">
+                    <p>`+item.body.one+`</p>
+                          <button type="button" class="carousel-button">
+                        ${item.header.two}
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <img class="third-slide" src="`+path+item.banner.three+`" onerror="onBannerError(this);"  alt="Third slide">
                 <div class="container">
-                    <div class="carousel-caption">
-                        <h1>`+item.header.three+`</h1>
-                        <p>`+item.body.three+`</p>
+                    <div class="carousel-caption carosel">
+                    <p>`+item.body.one+`</p>
+                         <button type="button" class="carousel-button">
+                        ${item.header.three}
+                        </button>
                     </div>
                 </div>
             </div>
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon fa fa-chevron-left" aria-hidden="true"></span>
+            <span >
+            <i class="icon-arrow-left" aria-hidden="true"></i>
+            </span>
             <span class="sr-only">Previous</span>
             </a>
             <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon fa fa-chevron-right" aria-hidden="true"></span>
+                <span>
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+                </span>
                 <span class="sr-only">Next</span>
             </a>
             <div actas="layout" class="login-sigup-layout" style="text-align:center; padding-left:5%;color:#d9534f;">  
-            <div actas="wrapper" class="loginOrRegister-wrapper">
-            <button type="button" class="ripple" target="logout('1');"> Register  &nbsp;</button>|
-            <button type="button" class="ripple" target="logout();"> &nbsp;Login</button> 
-            </div>
             </div>	
             `); 
          }
@@ -206,7 +218,7 @@ angular.controller('main', function ($scope, $sce) {
                    <div class="actionbar-favicon">
                       <img src="assets/images/ico.png" class="faviconLogo-img">
                    </div>
-                   <span class="title">Zulai<b style="color:#2ecc71; font-weight:bold;">tal</b></span>
+                   <span class="title">Zulai<b style="color:#01A3BA; font-weight:bold;">tal</b></span>
                  </div>
                 </app-name>
                </div>
@@ -214,8 +226,12 @@ angular.controller('main', function ($scope, $sce) {
                  <div actas="option" target="$sellActivity">
                      <i class="icon-plus" style="font-size:22px;"></i>
                   </div> 
+                <div actas="option" onclick="prepareCartActivity(1);">
+                 <span actas="badge" class="success notificationBadge" name="cartNotification-counter" state="0">0</span>
+                 <i class="icon-handbag" style="font-size:22px;"></i>
+              </div> 
                   <div actas="option" target="#myDrawer" style="margin-top:-1px">
-                      <i class="icon-options-vertical" name="drawerTrigger"></i>
+                      <i class="icon-menu" name="drawerTrigger"></i>
                   </div>
                </ul>
             `);
@@ -227,7 +243,7 @@ angular.controller('main', function ($scope, $sce) {
                <div class="actionbar-favicon">
                   <img src="assets/images/ico.png" class="faviconLogo-img">
                </div>
-               <span class="title">Zulai<b style="color:#2ecc71; font-weight:bold;">tal</b></span>
+               <span class="title">Zulai<b style="color:#01A3BA; font-weight:bold;">tal</b></span>
              </div>
             </app-name>
            </div>
@@ -237,7 +253,7 @@ angular.controller('main', function ($scope, $sce) {
                  <i class="icon-handbag" style="font-size:22px;"></i>
               </div> 
               <div actas="option" target="#myDrawer" style="margin-top:-1px">
-                  <i class="icon-options-vertical" name="drawerTrigger"></i>
+                  <i class="icon-menu" name="drawerTrigger"></i>
               </div>
            </ul>
         `);
@@ -301,26 +317,68 @@ angular.controller('main', function ($scope, $sce) {
             </div>
             <div actas="panel" class="profile-info-list editProfile-info">
                 <div actas="content">
-                    <div actas="data" class="data-list next">
-                        <p class="heading">Name</p>
-                        <input type="text" class="editProfile-input next capitalize" name="ep-name"  value="`+user.name+`">
-                    </div> 
-                    <div actas="data" class="data-list">
-                        <p class="heading">Mobile</p>
-                        <input type="tel" class="editProfile-input"  name="ep-number" maxlength="11" value="`+user.mobile+`">
-                    </div>
-                    <div actas="data" class="data-list next">
-                        <p class="heading">Email</p>
-                        <input type="email" class="editProfile-input next capitalize"  name="ep-email"  value="`+user.email+`">
-                    </div> 
-                    <div actas="data" class="data-list">
-                        <p class="heading">Address</p>
-                       <textarea class="editProfile-textarea capitalize"  name="ep-address" >`+user.address+`</textarea>
-                    </div> 
-                    <div actas="data" class="data-list next">
-                        <p class="heading">About</p>
-                        <textarea class="editProfile-textarea next" max-length="500"  name="ep-description" >`+user.description+`</textarea>
-                    </div>
+                   <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                           Name
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                         <input type="text" class="editProfile-input next capitalize" name="ep-name"  value="`+user.name+`">
+                                    </div>
+
+                                </div>
+                        
+                                   <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                           Mobile
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                       <input type="tel" class="editProfile-input"  name="ep-number" maxlength="11" value="`+user.mobile+`">
+                                    </div>
+
+                                </div>
+                                   <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            Email
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                         <input type="email" class="editProfile-input next capitalize"  name="ep-email"  value="`+user.email+`">
+                                    </div>
+
+                                </div>
+                                           <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                           Address
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                       <textarea class="editProfile-input capitalize"  name="ep-address" >`+user.address+`</textarea>
+                                    </div>
+
+                                </div>
+                                           <div class="row main-input-wrapper">
+                                    <div class="col-sm-4 input-icon">
+                                        <span>
+                                            Description
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12 main-input">
+
+                                       <textarea class=" editProfile-input" max-length="500"  name="ep-description" >`+user.description+`</textarea>
+                                    </div>
+
+                                </div>                                       
+                   
                     <div actas="data" class="data-list">
                         <div class="alert alert-warning warnningAlert"transition="shake" role="alert" >
                                   This is a warning alert—check it out!
@@ -363,13 +421,17 @@ angular.controller('main', function ($scope, $sce) {
                   <div class="actionbar-favicon">
                      <img src="assets/images/ico.png" class="faviconLogo-img">
                   </div>
-                  <span class="title">Zulai<b style="color:#2ecc71; font-weight:bold">tal</b></span>
+                  <span class="title">Zulai<b style="color:#01A3BA; font-weight:bold">tal</b></span>
                 </div>
                 </app-name>
                </div>
                <ul actas="option-bar" class="option-bar" position="right">
+               <div actas="option" onclick="prepareCartActivity(1);">
+                 <span actas="badge" class="success notificationBadge" name="cartNotification-counter" state="0">0</span>
+                 <i class="icon-handbag" style="font-size:22px;"></i>
+              </div> 
                   <div actas="option" target="#myDrawer">
-                      <i class="icon-options-vertical"></i>
+                      <i class="icon-menu"></i>
                   </div>
                </ul>
             `);

@@ -1,11 +1,11 @@
 html{
   width: 100%;
-  font-family:Arial, Helvetica, sans-serif !important;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  background:#f5f5f5;
+  /* background:#f5f5f5; */
 }
 html *{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight:400;
 }
 body{
@@ -14,8 +14,8 @@ body{
    font-size: 12px; 
    overflow:hidden;
     overflow-y: auto;
-   background:#f5f5f5;
-   font-family:Arial, Helvetica, sans-serif !important;
+   background:#f0f0f0;
+   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
    padding: 0;
    margin: 0;
    color: #333;
@@ -34,6 +34,38 @@ ayral-app .required{
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+}
+
+.carousel-indicators li{
+    width: 30px;
+    height: 3px;
+    background: #697e8c;
+    border:none
+}
+
+.preview-indicator.active{
+    background: #01A3BA;
+     width: 15px;
+    height: 15px;
+}
+.indicators{
+    margin: 10px auto 5px;
+    text-align: center;
+}
+.indicators li{
+    width: 12px;
+    height: 12px;
+    background: gray;
+    display: inline-block;
+    margin: 0  5px;
+    border-radius: 50%;
+
+}
+
+.carousel-indicators li.active{
+    width: 30px;
+    height: 5px;
+    background: #01A3BA;
 }
 .ripple:after, button:after, img:after, li:after{
   content: "";
@@ -61,8 +93,8 @@ ayral-app .mainLayout{
     min-height:100%;
     overflow: hidden;
     margin-top: 55px; 
-    margin-bottom: 70px;
-    padding-bottom: 100px;
+    /* margin-bottom: 70px; */
+    padding-bottom: 70px;
 }
 ayral-app  .topPadding{
     padding-top: 0;
@@ -75,7 +107,7 @@ ayral-app  .paddingBody{
   padding-top: 10px;
 }
 ayral-app .marketView-container{
-   margin-top: 51px !important;  
+   margin-top: 25px !important;  
 }
 h3,h2{
  font-size: 1.4em;
@@ -87,19 +119,20 @@ button{
     text-transform: capitalize;
 }
 ayral-app .action-bar-top{
-  width: 100.2%;
+  width: 100%;
   height: 56px;
-  background-color: #fff;
-  color: #000;
+  color: #d3d3d3;
   padding-top: 7px;
   margin-top: -2px;
   margin-left: -1px;
-  border-bottom: .5px solid rgba(0,0,0,.15);
+  background: #f0f0f0!important;
+  border:none!important;
+  /* border-bottom: .5px solid rgba(0,0,0,.15);
   box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
   -ms-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
-    -o-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24); */
 }
 ayral-app [actas="drawer"] [actas="layer"]{
     float: left !important;
@@ -145,6 +178,12 @@ ayral-app [actas="title"]{
     background: none;
 }
 
+[name="searchResultCounter"]{
+    color: #799ca5;
+    font-size: 16px!important;
+    text-transform: uppercase!important;
+    margin-bottom: 10px;;
+}
 .action-bar-top i{
     color: #000;
 }
@@ -161,10 +200,10 @@ ayral-app .notificationBadge{
 ayral-app  .actionbar-backbtn, ayral-app .actionbar-favicon{
     height: 25px;
     width: 30px;
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
     border-radius:5px;
-    color:#2ecc71;
-    font-size: 15px;
+    color:#01A3BA;
+    font-size: 19px;
     text-align: center;
     display: inline-block;
 }
@@ -192,13 +231,13 @@ ayral-app .logo-btn .title{
 }
 .readMore{
     margin-left: 2em;
-    color: #2ecc71;
+    color: #01A3BA;
 }
 .cart-title{
     padding: 5px;
 }
 ayral-app .drawer-header{
-    background:#2ecc71;
+    background:#01A3BA;
     padding: 0;
     width: 100.3%;
     margin-left:-.8px;
@@ -234,26 +273,27 @@ ayral-app  .menuList-layer{
    background: #fff;
 }
 ayral-app .menu-view li:hover,ayral-app .menu-view li.active,ayral-app .menu-view li:first-child{
-     background-color:#2ecc71;
-    border-color: #2ecc71;
+     background-color:#01A3BA;
+    border-color: #01A3BA;
     color: #ffffff;
 
 }
 
+
 ayral-app .tabs-view [state="active"]{
     color: #fff;
-    border-bottom: 2px solid #2ecc71;
+    border-bottom: 2px solid #01A3BA;
     opacity: 1;
 }
 ayral-app .tabs-view [state="active"]:hover{
-    border-bottom: 2px solid #2ecc71;
+    border-bottom: 2px solid #01A3BA;
     opacity: 1;
-    color: #2ecc71;
+    color: #01A3BA;
     font-size: 23px;
     opacity: 0.8;
 }
 ayral-app  .tabs-view [state="active"] i{
-    color: #2ecc71;
+    color: #01A3BA;
     opacity: 1;
     font-size: 23px;
     opacity: 0.8;
@@ -261,11 +301,16 @@ ayral-app  .tabs-view [state="active"] i{
 ayral-app .action-bar-bottom{
     height: 55px;
     border-top: .5px solid rgba(0,0,0,.15);
-  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+     box-shadow:none!important;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
   -ms-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
-    -o-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+    -o-box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24); */
+}
+
+[actas="tabs-view"] [actas="tab"], [actas="tabs-view"] [actas="tabs-item"]{
+    border-right: none;
 }
 
 .widget .newOld-wrapper{
@@ -436,13 +481,26 @@ ayral-app .item-action{
     padding-bottom: 2px;
     padding-left: 2px;
     margin-top: 3px;
-    color: #2ecc71;
+    color: #01A3BA;
     text-overflow: ellipsis;
     vertical-align: middle;
     text-align: left;
-    background: #f5f5f5;
-    border-top:1px solid #2ecc71;
+    /* background: #f5f5f5;
+    border-top:1px solid #01A3BA; */
     
+}
+.item-footer{
+    background:none!important;
+}
+[actas="widget"], .upload-info, .item-name{
+background:none!important;
+box-shadow: none;
+border:none;
+}
+.item-name{
+    font-size: 18px;
+    color: #799ca5;
+    height: auto!important;
 }
 .item-layout .item-action{
    width: 100%;
@@ -451,9 +509,9 @@ ayral-app .item-action{
    right: 0;
 }
 .tabs-view [state="active"]{
-    color: #2ecc71;
+    color: #01A3BA;
     font-weight: bold;
-    border-bottom: 2px solid #2ecc71;
+    border-bottom: 2px solid #01A3BA;
     opacity: 1;
 }
 .item-layout .item-action .action-btn{
@@ -762,6 +820,23 @@ ayral-app  .upload-body input{
   border-bottom: 1px solid #d4d4d4; 
   color: #333;
 }
+
+.autocomplete.landingSearch-view{
+    display: block;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px -9px;
+    border-bottom: none;
+    background: #f7f7f7;
+    margin-top: 15px!important;
+}
+
+.autocomplete .homeSearchButton{
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+.app.mainLayout{
+    background: #f0f0f0;
+}
 .autocomplete-items div:hover,.autocomplete-items div:first-child {
   /*when hovering an item:*/
   background-color: #e9e9e9; 
@@ -816,18 +891,117 @@ ayral-app .login-bg{
   width: 100%;
   height: 101%;
   position:fixed;
-  background: none;
+  background: #fefefe;
   top: 0;
   left: 0;
   bottom: -1;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(rgba(0, 0, 255, 0.02), rgba(29, 249, 122, 0.72)),url(../images/sign-background.jpg);
+  /* background-image: linear-gradient(rgba(0, 0, 255, 0.02), rgba(29, 249, 122, 0.72)),url(../images/sign-background.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   overflow-y: auto;
   overflow-x: hidden;
-  color: #fff;
+  color: #d3d3d3;
+}
+
+.signup-bg{
+    color: #d3d3d3;
+}
+
+.login-bg .icon, .signup-bg .icon{
+    font-size:20px;
+    color:#00BCD4;
+    background: none;
+    border: none;
+    padding: 0;
+}
+.main-input,.input-icon{
+    display: inline-block;
+    margin-bottom: -10px;
+}
+.main-input{
+    width: 90%;
+}
+.input-icon{
+    width: 3%;
+    /* text-align: center; */
+    /* margin-left: 1px; */
+}
+
+.main-input input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+}
+.login-view .action-bar-top, .sign-view .action-bar-top{
+    background: #f6f6f8;
+    box-shadow: none;
+    border-bottom:none;
+}
+.main-input input::placeholder{
+    color: #d3d3d3;
+}
+.main-input input{
+    color: #d3d3d3;
+}
+.labelauty-unchecked,.labelauty-checked{
+    color: #d3d3d3!important;
+}
+[actas="sign-view"] [actas="footer"] [actas="link"]{
+    color: #d3d3d3!important;
+    margin-bottom: 35px;
+}
+.toolbar-content{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+.sign-view [actas="body"]{
+margin-top: 35%!important;
+}
+.register-view [actas="body"]{
+margin-top: 20%!important;
+}
+.toolbar-content .icon-menu{
+    font-size: 24px;
+}
+.toolbar-content div{
+display: inline-block;
+}
+.toolbar-content .row{
+    width: 100%;
+}
+
+.toolbar-icon{
+width: 4%!important;
+}
+
+.toolbar-text{
+width: 90%!important;
+}
+.app-logo{
+    width: 80%;
+    height: 100px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.logo{
+    background:url(../images/logo.PNG);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.main-input-wrapper{
+    border-bottom: 1px solid  #e2dfdf;
+    /* padding-left: 5px; */
+    margin:20px auto 20px;
 }
 ayral-app .launcher-bg1,ayral-app .launcher-bg2, ayral-app .launcher-bg3{
   width: 100%;
@@ -875,16 +1049,16 @@ ayral-app .launcher-bg3 .getStarted-btn:hover{
     font-weight: 100;
 }
 .account-trigger{
-    border: 1px solid #2ecc71
+    border: 1px solid #01A3BA
 }
 .account-trigger[state="active"]{
- background-color: #2ecc71;
-  background: -moz-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
-  background: linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
-  background: -webkit-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  background: -ms-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  background: -o-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  border-color:  #2ecc71;
+ background-color: #01A3BA;
+  background: -moz-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%); 
+  background: linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%); 
+  background: -webkit-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  background: -ms-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  background: -o-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  border-color:  #01A3BA;
   color: #fff;
     -webkit-box-shadow: 0 10px 6px -10px #000;
        -moz-box-shadow: 0 10px 6px -10px #000;
@@ -925,9 +1099,13 @@ ayral-app .upload-body .input-container .field{
   margin-top: 3px; 
 }
 .sign-container .sign-view .sigb-btn{
-  margin-top: 5px;
-  height: 34px;
+  margin-top: 39px;
+  height: 50px;
   text-transform: uppercase;
+  background: #00BCD4;
+  vertical-align: middle;
+  text-align:center;
+  line-height: 43px;
 }
 .sign-container .sign-logo{
     width: 60px;
@@ -1139,7 +1317,7 @@ ayral-app  .data-list{
 }
 ayral-app .profile-info-list .data-list .heading{
     width: 100%;
-    color: #2ecc71;
+    color: #01A3BA;
     font-weight: bold;
 }
 ayral-app .profile-info-list .data-list .data{
@@ -1163,7 +1341,7 @@ ayral-app .profile-info-list .data-list .data .inner-data-ico{
     width: 40px;
     height: 40px;
     display: inline-block;
-    border-color: #2ecc71;
+    border-color: #01A3BA;
     border-right: 1px solid #ccc
     
 }
@@ -1190,7 +1368,7 @@ ayral-app .editProfile-textarea{
     padding-left: 5px;
     border-bottom: none;
 }
-ayral-app . .profile-photo-wrp{
+ayral-app .profile-photo-wrp{
     position: relative;
 }
 ayral-app .profile-photo-wrp h4{
@@ -1198,7 +1376,16 @@ ayral-app .profile-photo-wrp h4{
     font-weight: bold;
     text-overflow: ellipsis;
 }
-
+.profile-info-list .main-input-wrapper{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.profile-info-list .main-input-wrapper textarea{
+    color:#d3d3d3;
+}
+.profile-info-list .input-icon{
+    color:#01A3BA
+}
 ayral-app .profile-photo-wrp img{
     border: 2px solid #fff;
     background: #fff;
@@ -1252,7 +1439,7 @@ ayral-app  .saveProfile-editor-trigger{
    END OF PROFILE
 */
 ayral-app .category-2dlayout{
-    width: 101%;
+    width: 100%;
     position: relative;
     display: block;
     vertical-align: baseline;
@@ -1261,6 +1448,11 @@ ayral-app .category-2dlayout{
     overflow-x: hidden;
     overflow-y: auto;
     
+}
+.category-name{
+    text-transform: uppercase;
+    color: #799ca5;
+    text-align: center;
 }
 ayral-app .category-2dlayout [actas="layout"]{
     width: 28%;
@@ -1276,18 +1468,21 @@ ayral-app .category-2dlayout [actas="layout"]{
     cursor: pointer;
     font-size: 14px;
     padding-bottom: 5px;
-     border:  1px solid #e4e4e4;    
+   
+     /* border:  1px solid #e4e4e4;     */
 }
 ayral-app .category-2dlayout [actas="layout"] img{
     width: 60%;
     height:50%; 
 }
+
+
 ayral-app .category-2dlayout [actas="layout"]:hover{
   opacity: 0.7;
 }
-.carousel-indicators{
+/* .carousel-indicators{
  display: none;    
-}
+} */
 /*
 END OF CATEGORY LIST
 */
@@ -1419,17 +1614,21 @@ ayral-app .result-counter-view{
 ayral-app .result-counter-view-found{
     margin-bottom: 0;
     padding: 0;
-    padding-left: 2px;
+    padding-left: 14px;
     display: block;
 }
+ayral-app .wrapper{
+    text-align: center;
+    background:none!important
+}
 ayral-app .result-counter-view-found h4 i{
-        background-color: #2ecc71;
-  background: -moz-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
-  background: linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
-  background: -webkit-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  background: -ms-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  background: -o-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  border-color:  #2ecc71;
+        background-color: #01A3BA;
+  background: -moz-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%); 
+  background: linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%); 
+  background: -webkit-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  background: -ms-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  background: -o-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  border-color:  #01A3BA;
 }
 ayral-app .result-counter-view h4,ayral-app .result-counter-view-found h4{
    font-weight: bold;
@@ -1452,7 +1651,7 @@ ayral-app .paymentMethods-wrp button{
    -webkit-box-shadow:none;
 }
 ayral-app .paymentMethods-wrp button:first-child{
-   color: #2ecc71;
+   color: #01A3BA;
    border-bottom: 1px solid #ccc; 
 }
 ayral-app .address-accuracy{
@@ -1517,7 +1716,7 @@ ayral-app .trashLayer{
     cursor: pointer;
 }
 ayral-app .trashLayer:focus{
-   background: #2ecc71;
+   background: #01A3BA;
 }
 ayral-app .activityLoader{
    position: fixed;
@@ -1560,7 +1759,7 @@ ayral-app .new{
   background: -webkit-linear-gradient(top,  #009688 0%, #0ba596 50%, #0ba596 51%,  #009688 100%);
   background: -ms-linear-gradient(top,  #009688 0%, #0ba596 50%, #0ba596 51%,  #009688 100%);
   background: -o-linear-gradient(top,  #009688 0%, #0ba596 50%, #0ba596 51%,  #009688 100%);
-  border-color:  #2ecc71;
+  border-color:  #01A3BA;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -1638,41 +1837,52 @@ ayral-app .new{
     font-size: 10px;
 }
 ayral-app .sizesColors-wrapper{
-    text-align:left;
+    /* text-align:left; */
     padding:10px;
     padding-bottom: 0;
     padding-top: 10px;
     margin-bottom: 15px;
     margin-top: 10px;
     display: inline-block;
-    width: 46%;
-    background: #f5f5f5;
+    /* width: 46%; */
+    /* background: #f5f5f5; */
     
 }
 
+ ayral-app .sizesColors-wrapper [name="current-selectedSize"]{
+     background: #01A3BA!important;
+     color: #f0f0f0!important;
+ }
+
 ayral-app .sizesColors-wrapper .sizesColors-btn{
-    min-width: 50px;
+    width: 35px;
+    height: 35px;
     margin-right: 5px;
     font-size: 12px;
     background: #fff;
-     border: 1px solid #2ecc71;
+    padding: 2px!important;
+     /* border: 1px solid #01A3BA; */
     box-shadow: none;
     -webkit-box-shadow:none;
        -moz-box-shadow: none;
-    border-radius: 99px;
+    border-radius: 50%;
     border-top: none;
     border-bottom: none;
     margin-bottom: 1em;
-    font-size: 8px;
-        border: 1px solid #2ecc71;
+    font-size: 11px;
+    color:#799ca5;
+        /* border: 1px solid #01A3BA;
     border-top: 2px solid #333; 
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #333; */
+}
+.category-container{
+    margin-top:15px;
 }
 ayral-app .sizesColors-wrapper .sizesColors-btn:focus, 
 ayral-app .sizesColors-wrapper [name="current-selectedSize"],
 ayral-app .sizesColors-wrapper [name="current-selectedColor"]{
     opacity: 0.7;
-    border: 1px solid #333;
+    border: 1px solid #01A3BA;
 }
 ayral-app .report-container{
   margin-top: 1em;
@@ -1728,13 +1938,13 @@ ayral-app .settingsLanguagesOption-wrp .group-view .settingsLanguageTrigger{
     font-size: 12px !important;
 }
 ayral-app .settingsLanguagesOption-wrp .group-view .settingsLanguageTrigger.active{
-background-color: #2ecc71;
-  background: -moz-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
-  background: linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%); 
-  background: -webkit-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  background: -ms-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  background: -o-linear-gradient(top,  #2ecc71 0%, #25bb65 50%, #25bb65 51%,  #2ecc71 100%);
-  border-color:  #2ecc71;
+background-color: #01A3BA;
+  background: -moz-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%); 
+  background: linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%); 
+  background: -webkit-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  background: -ms-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  background: -o-linear-gradient(top,  #01A3BA 0%, #25bb65 50%, #25bb65 51%,  #01A3BA 100%);
+  border-color:  #01A3BA;
   color: #fff;
   color: #fff;
 }
@@ -1773,11 +1983,11 @@ ayral-app .headerContainer{
     border-bottom: 1px solid #e2dfdf;
     display:block;
     width: 100%;
-    padding: .2em;
+    /* padding: .2em; */
     margin-top: 0;
     background: #fff;
-    padding: 1em;
-    padding-top: 1.5em;
+    /* padding: 1em; */
+    /* padding-top: 1.5em; */
     font-size: 14px;
 }
 ayral-app .headerContainer.fixed{
@@ -2183,7 +2393,7 @@ input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked{
 }
 .login-view input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked, 
 .login-view input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked{
-    color: #fff;
+    color: #d3d3d3;
 }
 
 ayral-app .loginCheck-wrp  input.labelauty + label > span.labelauty-unchecked-image
@@ -2198,7 +2408,7 @@ ayral-app .loginCheck-wrp  input.labelauty + label > span.labelauty-unchecked-im
 ayral-app .loginCheck-wrp  input.labelauty + label > span.labelauty-checked-image
 {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #d3d3d3;
 	background: url(../images/checked.png) no-repeat scroll right center;
     background-position: center;
 }
@@ -2206,7 +2416,7 @@ ayral-app .loginCheck-wrp  input.labelauty + label > span.labelauty-checked-imag
   font-size: 16px;
 }
 .login-view  [actas="footer"] [actas="link"]{
-  color: #fff;
+  color: #d3d3d3;
 }
 .modalAlert-layer{
     width: 100%;

@@ -126,7 +126,7 @@ function sayayyaProduct(){
 
                         <div class="upload-info"> 
                             <p class="price">
-                            <sapn>₦`+item.price+`</sapn></p>
+                            ₦`+item.price+`</p>
                         </div>
                       </div>    
                   </div>

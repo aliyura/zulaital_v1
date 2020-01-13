@@ -7,10 +7,24 @@
         }  
     }
 
+.left.carousel-control, .right.carousel-control{
+    vertical-align: middle;
+    padding-top: 30%;
+}
+.carousel-control .icon-arrow-right, .carousel-control .icon-arrow-left{
+  color: #01A3BA;
+}
 .carousel,.slider-banner{
   min-height: 200px;
-  background-color: #777;
+  /* background-color: #777; */
     position: relative;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.39); */
+}
+.carousel .item{
+  background: transparent;
+}
+.carousel-control{
+  background: none!important;
 }
 .carousel .item{
   height: 300px;
@@ -23,7 +37,7 @@
   min-height:250px;
   background-color: #777;
   color: #fff;
-    border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 .location-view{
     width: 100%;
@@ -41,6 +55,26 @@
    bottom: 0;
 }
 
+.carosel.carousel-caption{
+  margin-left: 25%;
+  top: 0;
+}
+
+
+.carosel.carousel-caption button{
+      margin-top: 10px;
+      border-radius: 20px;
+      background: #01A3BA;
+      box-shadow:none!important;
+      color:#f5f5f5;
+      min-width: 160px;
+}
+.carosel.carousel-caption p{
+      color: #01A3BA;
+    /* font-size: large; */
+    font-weight: 600;
+    font-size: 16px;
+}
 /* Declare heights because of positioning of img element */
 
 .carousel-inner > .item > img {
@@ -90,4 +124,15 @@
       margin-top: 50px!important;
       padding-top: 35px;
     }
+}
+
+
+.slider-banner{
+  width: 92%;
+    height: 230px;
+    margin-top: 20px;
+}
+
+.slider-banner .item{
+  border-radius: 20px;
 }

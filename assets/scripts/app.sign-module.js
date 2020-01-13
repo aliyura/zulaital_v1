@@ -186,7 +186,7 @@ function activateAccount(username){
                         try{
                           var result=response.target.responseText;
                             
-                          if(!result.match(/success:/)){ revokeProgress();}
+                          if(result.match(/success:/)){ revokeProgress();}
                               
                           if(result.match(/success:/)){
                               var session=result.substr(result.indexOf(':')+1,result.length);
@@ -196,62 +196,63 @@ function activateAccount(username){
                               storage.setItem('info', JSON.stringify(logger));
                               storage.setItem('launch','true');
                               storage.setItem('pin',null);
-                              var backup=window.location.href.toString();
-                              if(backup.match(/backup=true/)){
-                                  var backupURI=backup.substr(backup.indexOf('return=')+7,backup.length);
-                                  backupURI=backupURI.replace('#signin','');
-                                app.render('index.html#'+backupURI);
-                              }else{
-                                 app.render('index.html');
-                              }
+                            //   var backup=window.location.href.toString();
+                              app.render('index.html');
+                            //   if(backup.match(/backup=true/)){
+                            //       var backupURI=backup.substr(backup.indexOf('return=')+7,backup.length);
+                            //       backupURI=backupURI.replace('#signin','');
+                            //     app.render('index.html#'+backupURI);
+                            //   }else{
+                            //      app.render('index.html');
+                            //   }
                           }
-                          else if(result.match(/ILC/)){
-                             inUsername.setValue('');
-                             inUsername.setError(); 
-                             inPassword.setValue('');
-                             inPassword.setError(); 
-                             controller.setHtml('Try Again');
-                             warn('Invalid Login Credentials !');
-                          }
-                          else if(result.match(/IU/)){
-                             inUsername.setValue('');
-                             inUsername.setError(); 
-                             controller.setHtml('Try Again');
-                             warn('Invalid Username !');
-                          } 
-                          else if(result.match(/SP/)){
-                             inUsername.setError(); 
-                             inPassword.setError();
-                             controller.setHtml('Try Again');
-                             warningAlert('This Account has been suspended, please contact customer support! <br/><br/><b target="tel:80000000000">+(234) 80000000000</b>');
-                          }  
-                         else if(result.match(/ER/)){
-                             inUsername.setError(); 
-                             inPassword.setError();
-                             controller.setHtml('Try Again');
-                              warningAlert('This Account has been Terminated. Please contact customer support for resolution! <br/><br/><b target="tel:80000000000">+(234) 80000000000</b>');
-                          } 
-                         else if(result.match(/IA/)){
-                             inUsername.setError(); 
-                             inPassword.setError();
-                             controller.setHtml('Try Again');
-                             warningAlert( `This Account is currently not active, please click activate now to proceed <br/>
-                                          <button class="alert-success" onclick="activateAccount('`+username+`');"  style="margin-top:7px; padding:1px; text-decoration:none; padding-left:5px; border-radius:2px; font-size:10px; padding-right:5px">Activate Now</button>`);
-                          } 
-                          else if(result.match(/IP/)){
-                             inPassword.setValue('');
-                             inPassword.setError(); 
-                             controller.setHtml('Try Again');
-                             warn('Invalid Password !');
-                          }
-                          else if(result.match(/connection_failed/)){
-                            controller.setHtml('Try Again');
-                            errorAlert('Connection failed !'); 
-                          }
-                          else{
-                            controller.setHtml('Try Again');
-                            warn(result); 
-                          }
+                        //   else if(result.match(/ILC/)){
+                        //      inUsername.setValue('');
+                        //      inUsername.setError(); 
+                        //      inPassword.setValue('');
+                        //      inPassword.setError(); 
+                        //      controller.setHtml('Try Again');
+                        //      warn('Invalid Login Credentials !');
+                        //   }
+                        //   else if(result.match(/IU/)){
+                        //      inUsername.setValue('');
+                        //      inUsername.setError(); 
+                        //      controller.setHtml('Try Again');
+                        //      warn('Invalid Username !');
+                        //   } 
+                        //   else if(result.match(/SP/)){
+                        //      inUsername.setError(); 
+                        //      inPassword.setError();
+                        //      controller.setHtml('Try Again');
+                        //      warningAlert('This Account has been suspended, please contact customer support! <br/><br/><b target="tel:80000000000">+(234) 80000000000</b>');
+                        //   }  
+                        //  else if(result.match(/ER/)){
+                        //      inUsername.setError(); 
+                        //      inPassword.setError();
+                        //      controller.setHtml('Try Again');
+                        //       warningAlert('This Account has been Terminated. Please contact customer support for resolution! <br/><br/><b target="tel:80000000000">+(234) 80000000000</b>');
+                        //   } 
+                        //  else if(result.match(/IA/)){
+                        //      inUsername.setError(); 
+                        //      inPassword.setError();
+                        //      controller.setHtml('Try Again');
+                        //      warningAlert( `This Account is currently not active, please click activate now to proceed <br/>
+                        //                   <button class="alert-success" onclick="activateAccount('`+username+`');"  style="margin-top:7px; padding:1px; text-decoration:none; padding-left:5px; border-radius:2px; font-size:10px; padding-right:5px">Activate Now</button>`);
+                        //   } 
+                        //   else if(result.match(/IP/)){
+                        //      inPassword.setValue('');
+                        //      inPassword.setError(); 
+                        //      controller.setHtml('Try Again');
+                        //      warn('Invalid Password !');
+                        //   }
+                        //   else if(result.match(/connection_failed/)){
+                        //     controller.setHtml('Try Again');
+                        //     errorAlert('Connection failed !'); 
+                        //   }
+                        //   else{
+                        //     controller.setHtml('Try Again');
+                        //     warn(result); 
+                        //   }
                         }
                         catch(error){
                           revokeProgress();

@@ -10,8 +10,7 @@ function sayayyaMarket(){
            if(type==1){
                layer.render(`
                <div actas="wrapper"  class="result-counter-view-found">
-                   <h4 name="searchResultCounter">Latest items <i actas="badge" class="danger"> 
-                   <span name="marketResultCounter-value">`+items[0].rows+`</span> Found</i></h4>
+                   <h4 name="searchResultCounter">New Arrivals</h4>
                </div>
                `);
            }else{
@@ -48,18 +47,17 @@ function sayayyaMarket(){
 
      
           layer.append(`
-          <section actas="widget" class="widget" `+masterWidget+` number="`+item.rownum+`" id="item`+item.id+`">
+          <section actas="widget"  style="width:40%; margin:0px 4% 8%;overflow:visible" class="widget" `+masterWidget+` number="`+item.rownum+`" id="item`+item.id+`">
               <div  class="item-layout" >
                  <div actas="group-item" class="sample-view"  style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.68)),url(`+item.sample+`);" onclick="previewActivity('`+item.id+`','`+item.name+`');">
                      `+item_condition+`
                      <div class="oneOfCounter-wrapper success">1/`+item.count+`</div>
                   </div> 
-                  <div actas="group-item" class="sample-info">
+                  <div actas="group-item" class="item-footer">
                     <div class="item-name">`+item.name+`</div>
 
-                    <div class="upload-info"> 
-                        <p class="price">
-                        <sapn>₦`+item.price+`</sapn></p>
+                    <div class="upload-info">                         
+                        <span class="price">₦`+item.price+`</span>
                     </div>
                   </div>    
               </div>

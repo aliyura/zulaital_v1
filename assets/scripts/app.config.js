@@ -1,7 +1,7 @@
 var angular = angular.module('app',['ngSanitize']),
     initialLanguage=storage.getItem('language'),
     initialLocation=storage.getItem('location'),
-    hostname= 'https://localhost/projects/klassymall.com/app',
+    hostname= 'http://localhost/zulaital_v1/app',
     session=storage.getItem('session'), 
     launcher=storage.getItem('launch'),
     sessionExist=false,
@@ -92,7 +92,7 @@ function profilePhotoError(e){
   Prepare(e).setAttribute('src', 'assets/images/avatar.jpg');
 }
 function onBannerError(e){
-  Prepare(e).setAttribute('src', 'assets/images/banner.jpg');
+  Prepare(e).setAttribute('src', 'assets/images/banner.png');
 }
 function previewTabsManager(e,tab,ownerId){
     foreach(app.find('$previewTabs-view').getChildren('section'),function(current){
